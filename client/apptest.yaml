@@ -1,0 +1,64 @@
+#[START runtime]
+runtime: nodejs12
+service: default
+#[END runtime]
+
+#[START handlers]
+handlers:
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/agent
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/tenant/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/annex/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/card/.*
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/rejected
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj2/.*/pm/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rj3/.*/card/approved
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /register/rjs/.*/service-start
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
+  - url: /
+    static_dir: build
+    secure: always
+# [END handlers]
+
+# [START variables]
+env_variables:
+  REACT_APP_BASE_URL: https://rimbo-api-dot-rimbo-test.ew.r.appspot.com/api
+  REACT_APP_API_RIMBO_TENANCY: /tenancies/tenancy
+  REACT_APP_API_RIMBO_TENANCY_BADI: /tenancies/tenancy/badi
+  REACT_APP_API_RIMBO_TENANCIES: /tenancies
+  REACT_APP_API_RIMBO_TENANT: /tenants/tenant
+  REACT_APP_API_RIMBO_TENANT_STRIPE: /tenants/stripe
+  REACT_APP_BASE_URL_EMAIL: https://badibackend-dot-rimbo-test.ew.r.appspot.com/submit-email
+  REACT_APP_BASE_URL_STRIPE: https://badibackend-dot-rimbo-test.ew.r.appspot.com/stripe
+# [END variables]
+
