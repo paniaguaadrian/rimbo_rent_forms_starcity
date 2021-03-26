@@ -7,7 +7,7 @@
     "subtitle": "If you're an agent, contact with...",
     "subtext": "If you want to know more about.... do the following..."
   },
-  "RJ1": {
+  "F1SC": {
     "header": {
       "title": "List your tenant",
       "subtitleOne": "Fill out the fields.",
@@ -15,13 +15,20 @@
       "subtitleThree": "Receive a response via email."
     },
     "stepZero": {
-      "agencyName": "Agency Name",
-      "contactPerson": "Contact Person",
-      "contactPersonPL": "Enter full name",
-      "emailPerson": "Email",
-      "emailPersonPL": "Enter a valid email address",
-      "phonePerson": "Phone Number",
-      "phonePersonPL": "Enter phone number"
+      "building": "Building",
+      "buildingPL": "Write the building name",
+      "room": "Room",
+      "roomPL": "Write the room number",
+      "rentAmount": "Monthly rent (in €)",
+      "rentAmountPL": "Enter rent",
+      "acceptance": "Acceptance Criteria",
+      "acceptancePL": "Write the reason of acceptation",
+      "rentStartDate": "Rent start Date",
+      "rentEndDate": "Rent end Date",
+      "pp1": " By submitting this form, you understand and accept that we use your information in accordance with our",
+      "pp2": "privacy policy",
+      "pp3": "and",
+      "pp4": "cookies policy"
     },
     "stepOne": {
       "tenantName": "Tenant's Full Name",
@@ -36,8 +43,6 @@
       "servicePL": "Select a Badi service",
       "rentDuration": "Duration rental agreement (years)",
       "rentDurationPL": "Enter duration",
-      "rentAmount": "Monthly rent (in €)",
-      "rentAmountPL": "Enter rent",
       "completeRentalAddress": "Address of the property",
       "completeRentalAddressPL": "Enter complete address",
       "rentalAddress": "Address of the property",
@@ -47,11 +52,7 @@
       "rentalCity": "City",
       "rentalCityPL": "Enter the city name",
       "rentalPostalCode": "Postal code",
-      "rentalPostalCodePL": "XXXXX",
-      "pp1": " By submitting this form, you understand and accept that we use your information in accordance with our",
-      "pp2": "privacy policy",
-      "pp3": "and",
-      "pp4": "cookies policy"
+      "rentalPostalCodePL": "XXXXX"
     },
     "completed": {
       "title": "Warm welcome ",

@@ -7,21 +7,28 @@
     "subtitle": "Si eres un agente, ponte en contacto con...",
     "subtext": "Si quieres saber más de.... haz lo siguiente..."
   },
-  "RJ1": {
+  "F1SC": {
     "header": {
       "title": "Registra a tu inquilino para su evaluación",
       "subtitleOne": "Completa los campos.",
-      "subtitleTwo": "Rimbo lo evalúa en los próximos 24 horas.",
+      "subtitleTwo": "Rimbo lo evalúa en las próximas 24 horas.",
       "subtitleThree": "Recibirás una respuesta por correo electrónico."
     },
     "stepZero": {
-      "agencyName": "Nombre de la inmobiliaria",
-      "contactPerson": "Persona de contacto",
-      "contactPersonPL": "Escribe tu nombre completo",
-      "emailPerson": "Correo electrónico",
-      "emailPersonPL": "Escribe el correo electrónico",
-      "phonePerson": "Número de teléfono",
-      "phonePersonPL": "Escribe el número de teléfono"
+      "building": "Building",
+      "buildingPL": "Write the building name",
+      "room": "Room",
+      "roomPL": "Write the room number",
+      "rentAmount": "Monthly rent (in €)",
+      "rentAmountPL": "Enter rent",
+      "acceptance": "Acceptance Criteria",
+      "acceptancePL": "Write ther eason of acceptation",
+      "rentStartDate": "Rent start Date",
+      "rentEndDate": "Rent end Date",
+      "pp1": " Al enviar este formulario, comprendes y aceptas que utilizamos tu información de acuerdo con nuestra",
+      "pp2": "política de privacidad",
+      "pp3": "y nuestra",
+      "pp4": "política de cookies"
     },
     "stepOne": {
       "tenantName": "Nombre completo del inquilino",
@@ -47,11 +54,7 @@
       "rentalCity": "Población del inmueble",
       "rentalCityPL": "Escribe la ciudad",
       "rentalPostalCode": "Código postal del inmueble",
-      "rentalPostalCodePL": "XXXXX",
-      "pp1": " Al enviar este formulario, comprendes y aceptas que utilizamos tu información de acuerdo con nuestra",
-      "pp2": "política de privacidad",
-      "pp3": "y nuestra",
-      "pp4": "política de cookies"
+      "rentalPostalCodePL": "XXXXX"
     },
     "completed": {
       "title": "Saludos ",
