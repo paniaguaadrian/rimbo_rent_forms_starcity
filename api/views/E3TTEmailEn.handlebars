@@ -349,9 +349,7 @@ a{
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
           			<td class="logo" style="text-align: center;">
-			            <img class='logo-image' src="cid:starcitylogo"><a href="https://starcity.com/"></a></img>
-
-						
+			             <img class='logo-image' src="cid:starcitylogo"><a href="https://starcity.com/"></a></img>
 			          </td>
           		</tr>
           	</table>
@@ -363,7 +361,8 @@ a{
             	<tr>
             		<td>
             			<div class="text" style="padding: 0 3em; text-align: center;">
-							<h3>Yay!</h3>				
+							<h3>Hi {{tenantsName}}</h3>						
+            				<h2>Greetings from <span>StarCity - Rimbo </span>and thank you for registering us!</h2>
             			</div>
             		</td>
             	</tr>
@@ -376,66 +375,34 @@ a{
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h3>La agencia {{agencyName}} ha rellenado el formulario F1SC</h3>
-
+		              	<h2>Important:</h2>
+		              	<p>Please, read the attached "Tenant’s guide to Rimbo": <i>How to make the most out of Rimbo.</i></p>
 		            	</div>
 		          </tr><!-- end: tr -->
-					<td valign="middle" class="hero hero-2 bg_white" style="padding: 1em 0;">
+					<td valign="middle" class="hero hero-2 bg_white" style="padding: 2em 0;">
 				<table>
 					<tr>
 						<td>
-							<div class="text" style="padding: 0em 3em; text-align: left; color: black;">
-								<h3>Inquilino:</h3>
-								<ul>
-                                    <li>Nombre completo del inquilino: {{tenantsName}}</li>
-                                    <li>Correo electrónico del inquilino: {{tenantsEmail}}</li>
-									<li>Número de teléfono del inquilino: {{tenantsPhone}}</li>
-									<li>Dirección actual: {{tenantsAddress}}</li>
-									<li>Código Postal Actual: {{tenantsZipCode}}</li>
-									<li>Tipo de Documento: {{documentType}}</li>
-									<li>Número  de Documento: {{documentNumber}}</li>
-									<li>Ingreso mensual neto: {{monthlyNetIncome}}€</li>
-									<li>Tipo de puesto: {{jobType}}</li>
-									<li>Criterio de entrada: {{acceptanceCriteria}}</li>
-									
-									<li>Documento identidad (Frontal): {{documentImageFront}}</li>
-									<li>Documento identidad (Atrás): {{documentImageBack}}</li>
-                                </ul>
-								<h3>Información del apartamento</h3>
-								<ul>
-									<li>Alquiler mensual: {{rentAmount}}€</li>
-                                    <li>Edificio: {{building}}</li>
-                                    <li>Habitación: {{room}}</li>
-                                    <li>Fecha de entrada: {{rentStartDate}}</li>
-                                    <li>Fecha de salida: {{rentEndDate}}</li>
-								</ul>
+							<div class="text" style="padding: 1em 3em; text-align: left;">
+								
+								<h3><span>Starcity</span> joined forces with Rimbo to help you move you into your new home quick and easy - and deposit-free!</h3>
 								
 							</div>
 						</td>
 					</tr>
 				</table>
 
-				{{!-- <table>
+				<table>
 					<tr>
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>Nos pondremos en contacto con el/la inquilino/a y llevaremos a cabo la evaluación para garantizar su solvencia. Una vez completada la evaluación, te la enviaremos.</h3>
+								<h3>With Rimbo you ‘check in’ without paying cash deposit, and pay for any damages or unpaid rent only when you check out.</h3>
 								
 							</div>
 						</td>
 					</tr>
-				</table> --}}
-
-				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		          <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center;">
-		              	<h3>And Gloria... determine that... the tenant will be... (press a button!)</h3>
-						  
-		          </tr><!-- end: tr -->
-					
-			</table>
+				</table>
 
 				{{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
@@ -449,29 +416,24 @@ a{
 					
 			</table> --}}
 					
-			{{!-- <table>
+			<table>
 					<tr>
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>Tan pronto como se realice la evaluación, nos pondremos en contacto contigo para completar el proceso de alquiler de esta propiedad.</h3>
-
-								<h3>Por favor, comprueba tu correo electrónico en las próximas horas.</h3>
-
-								<h3>¡A partir de ahora, gestionar este alquiler será más seguro y rápido que nunca!</h3>
-
-
+								<h3>Starcity team will be in touch with you with the following steps.</h3>
 								
 							</div>
 						</td>
 					</tr>
-			</table> --}}
+			</table>
 
-			{{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0px 30px; color: #6aa3a1;">
-		              	<h3>¡Saludos cordiales de nuestro equipo!</h3>
+		              	<h2>Good luck with your move and enjoy your new home!</h2>
+						<h2>Warm regards,</h2>
 						  
 		          </tr><!-- end: tr -->
 					
@@ -481,34 +443,12 @@ a{
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0px 30px; color: #6aa3a1;">
 		              	
-						<h3>Equipo de Soporte,</h3>
-		              	<h4>Móvil -  WhatsApp: +34 623 063 769<br/>
+						<h3>Support Team,</h3>
+		              	<h4>Phone - WhatsApp: +34 623 063 769<br/>
       					E-Mail: info@rimbo.com<br/>
-      					Web: <a href="http://www.rimbo.rent">rimbo.rent</a>
+      					Web site: <a href="http://www.rimbo.rent">rimbo.rent</a>
       					</h4>
 		            	</div>
-		          </tr><!-- end: tr -->
-					
-			</table> --}}
-
-			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		          <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0px 30px;">
-		              	<button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/tenancy/{{tenancyID}}/approved">¡Aprobar!(DEV)</a></button>
-
-                        <button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/tenancy/{{tenancyID}}/rejected">¡Rechazar!(DEV)</a></button>
-
-
-						{{!-- <button class='btn-rimbo' type="button"><a href="https://rimbo-test.ew.r.appspot.com/register/rj2/{{tenancyID}}/approved">¡Aprobar!(PROD)</a></button>
-
-                        <button class='btn-rimbo' type="button"><a href="https://rimbo-test.ew.r.appspot.com/register/rj2/{{tenancyID}}/rejected">¡Rechazar!(PROD)</a></button>
-
-
-						<button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/rj2/{{tenancyID}}/approved">¡Aprobar!(PROD2)</a></button>
-
-                        <button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/rj2/{{tenancyID}}/rejected">¡Rechazar!(PROD2)</a></button> --}}
-						  
 		          </tr><!-- end: tr -->
 					
 			</table>
@@ -546,7 +486,6 @@ a{
 					                <li><a href="http://www.rimbo.rent">Rimbo Rent</a></li>
 					                <li><a href="https://starcity.com/">Starcity</a></li>
 					                
-									
 					              </ul>
                       </td>
                     </tr>

@@ -3,6 +3,8 @@ import { TenancyReducer, DefaultTenancy } from "./tenancy-reducer";
 import styles from "./register-user.module.scss";
 import FormSteps from "./form-steps";
 import { withNamespaces } from "react-i18next";
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
 
 const RegisterTenancy = ({ t }) => {
   let [step, setStep] = useState(0);
@@ -12,6 +14,7 @@ const RegisterTenancy = ({ t }) => {
 
   return (
     <>
+      <NavBar />
       <div className={styles.RegisterContainer}>
         {step === 0 || step === 1 || step === 2 ? (
           <div className={styles.Register}>
@@ -30,6 +33,7 @@ const RegisterTenancy = ({ t }) => {
 
         <div className={styles.FormContent}>{steps[`${step}`].content}</div>
       </div>
+      <Footer />
     </>
   );
 };

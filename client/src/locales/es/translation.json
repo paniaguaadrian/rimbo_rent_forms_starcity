@@ -3,7 +3,7 @@
   "prevStepButton": "Atrás",
   "submitButton": "Enviar",
   "Success": {
-    "title": "Bienvenid@ a la unión entre Rimbo y Badi",
+    "title": "Bienvenid@ a la unión entre Rimbo y StarCity",
     "subtitle": "Si eres un agente, ponte en contacto con...",
     "subtext": "Si quieres saber más de.... haz lo siguiente..."
   },
@@ -15,16 +15,16 @@
       "subtitleThree": "Recibirás una respuesta por correo electrónico."
     },
     "stepZero": {
-      "building": "Building",
-      "buildingPL": "Write the building name",
-      "room": "Room",
-      "roomPL": "Write the room number",
-      "rentAmount": "Monthly rent (in €)",
-      "rentAmountPL": "Enter rent",
-      "acceptance": "Acceptance Criteria",
-      "acceptancePL": "Write ther eason of acceptation",
-      "rentStartDate": "Rent start Date",
-      "rentEndDate": "Rent end Date",
+      "building": "Edificio",
+      "buildingPL": "Escribe el nombre del edificio",
+      "room": "Habitación",
+      "roomPL": "Escribe el número de la habitación",
+      "rentAmount": "Alquiler mensual (en €)",
+      "rentAmountPL": "Escribe el alquiler mensual",
+      "acceptance": "Criterio de aceptación",
+      "acceptancePL": "Escribe el criterio de aceptación",
+      "rentStartDate": "Fecha inicio del alquiler",
+      "rentEndDate": "Fecha de finalización del alquiler",
       "pp1": " Al enviar este formulario, comprendes y aceptas que utilizamos tu información de acuerdo con nuestra",
       "pp2": "política de privacidad",
       "pp3": "y nuestra",
@@ -112,7 +112,7 @@
   },
   "RJ3": {
     "header": "New Tenant - Rimbo - La nueva forma de alquilar",
-    "title": "¡Genial! ¡Estás a solo un paso de formar parte de Badi!",
+    "title": "¡Genial! ¡Estás a solo un paso de formar parte de Starcity!",
     "subtitle": "Solo falta que revises nuestros Términos y condiciones y que proporciones la autorización de cargo",
     "warningOne": "* Tu tarjeta no va a ser bloqueada. La tarjeta no será cargada ahora. Solo en caso de reclamos legales presentados por el propietario la tarjeta será cargada, por un importe límite de ",
     "warningTwo": "1 mes de alquiler.",
@@ -159,5 +159,23 @@
     "tenantCardTitle": "El inquilino ha sido aceptado después de introducir su tarjeta.",
     "tenantCardSubtitle": "Has aceptado correctamente al inquilino",
     "tenantCardP": "El propietario y el inquilino recibirán un correo de confirmación."
+  },
+  "F2TT": {
+    "titleOne": "¡Alquila esta habitación ",
+    "titleTwo": "sin pagar fianza",
+    "leftTextOne": "Estamos muy ilusionados de que hayas decidido formar parte de Starcity y somos conscientes de que para ti es muy importante mudarte de una manera fácil, ágil y asequible.",
+    "leftTextTwo": "Por esto en Starcity nuestras habitaciones no necesitan fianza en efectivo.",
+    "leftTextThree": "Con nosotros no tienes que adelantar la fianza. Solo tienes que registrar tu tarjeta de débito.",
+    "name": "Nombre Completo: ",
+    "email": "Email: ",
+    "phone": "Teléfono: ",
+    "creditCard": "Datos tarjeta de débito",
+    "subcreditcard": "Recuerda: debes registrar la tarjeta de la cuenta en la que recibes tus ingresos",
+    "warningcreditcard": " * Solo preautorización, limitada por importe hasta 1 mes de alquiler"
+  },
+  "cardsuccess": {
+    "title": "¡Ya eres parte de Starcity!",
+    "textOne": "Genial, ¡hemos recibido tus detalles!",
+    "textTwo": " Nos pondremos en contacto contigo en breve para completar el proceso."
   }
 }

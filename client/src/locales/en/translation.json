@@ -3,7 +3,7 @@
   "prevStepButton": "Previous Step",
   "submitButton": "Send",
   "Success": {
-    "title": "Welcome to the union between Rimbo and Badi",
+    "title": "Welcome to the union between Rimbo and Starcity",
     "subtitle": "If you're an agent, contact with...",
     "subtext": "If you want to know more about.... do the following..."
   },
@@ -40,7 +40,7 @@
     },
     "stepTwo": {
       "service": "Choose service",
-      "servicePL": "Select a Badi service",
+      "servicePL": "Select a Starcity service",
       "rentDuration": "Duration rental agreement (years)",
       "rentDurationPL": "Enter duration",
       "completeRentalAddress": "Address of the property",
@@ -157,5 +157,23 @@
     "tenantCardTitle": "The tenant has been accepted after the debit card request.",
     "tenantCardSubtitle": "You have successfully accepted the tenant",
     "tenantCardP": "The PM and the Tenant will receive a confirmation email."
+  },
+  "F2TT": {
+    "titleOne": "Rent this property ",
+    "titleTwo": "deposit-free",
+    "leftTextOne": "We  are excited about your upcoming move with Starcity and we want to make it as easy and cost-effective for you as possible!",
+    "leftTextTwo": "This is why our rooms are deposit-free.",
+    "leftTextThree": "No need to pay anything upfront. Just register your debit card details.",
+    "name": "Full name: ",
+    "email": "Email: ",
+    "phone": "Phone: ",
+    "creditCard": "Debit card details",
+    "subcreditcard": "Remember, you must list the account where you receive your income",
+    "warningcreditcard": " * Authorization only, limited to the amount of 1 month of rent"
+  },
+  "cardsuccess": {
+    "title": "You are already part of StarCity!",
+    "textOne": "Awesome, we have received your details!",
+    "textTwo": "We will get in touch with you shortly to complete the process."
   }
 }
