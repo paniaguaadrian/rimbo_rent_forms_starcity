@@ -8,27 +8,33 @@ import hbs from "nodemailer-express-handlebars";
 const testEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
-// ! RJ1 Form => RJ3, RJ4, RJD Emails.
-const sendRJ1FormEmails = async (req, res) => {
+// ! F1SC Form => E1R
+const sendF1SCFormEmails = async (req, res) => {
   const {
+    agencyName,
     tenantsName,
     tenantsEmail,
     tenantsPhone,
-    agencyName,
-    agencyContactPerson,
-    agencyEmailPerson,
-    agencyPhonePerson,
-    rentalAddress,
-    rentalPostalCode,
-    rentalCity,
-    rentAmount,
-    product,
-    rentDuration,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    monthlyNetIncome,
+    jobType,
+    documentImageFront,
+    documentImageBack,
     randomID,
+    rentAmount,
+    acceptanceCriteria,
+    rentStartDate,
+    rentEndDate,
+    tenancyID,
+    building,
+    room,
   } = req.body;
 
   // * START =======> RJ3 Email  @PM/Agency
-  const transporterRJ3 = nodemailer.createTransport(
+  const transporterE1R = nodemailer.createTransport(
     sgTransport({
       auth: {
         api_key: process.env.SENDGRID_API,
@@ -36,20 +42,20 @@ const sendRJ1FormEmails = async (req, res) => {
     })
   );
 
-  let optionsRJ3 = {
+  let optionsE1R = {
     viewEngine: {
       extname: ".handlebars",
       layoutsDir: "views/",
-      defaultLayout: "rj3Email",
+      defaultLayout: "E1REmail",
     },
     viewPath: "views/",
   };
 
-  transporterRJ3.use("compile", hbs(optionsRJ3));
+  transporterE1R.use("compile", hbs(optionsE1R));
 
-  const PMEmail = {
+  const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // PM/Agency email
+    to: testEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -59,27 +65,37 @@ const sendRJ1FormEmails = async (req, res) => {
         cid: "rimbologo",
       },
       {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
       },
     ],
-    template: "rj3Email",
+    template: "E1REmail",
     context: {
-      agencyContactPerson,
+      agencyName,
       tenantsName,
-      tenantsPhone,
       tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      monthlyNetIncome,
+      jobType,
+      documentImageFront,
+      documentImageBack,
+      randomID,
       rentAmount,
-      product,
-      rentDuration,
-      rentalAddress,
-      rentalPostalCode,
-      rentalCity,
+      acceptanceCriteria,
+      rentStartDate,
+      rentEndDate,
+      tenancyID,
+      building,
+      room,
     },
   };
 
-  transporterRJ3.sendMail(PMEmail, (err, data) => {
+  transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
     } else {
@@ -87,156 +103,39 @@ const sendRJ1FormEmails = async (req, res) => {
     }
   });
   // * END =======> RJ3 Email  @PM/Agency
-
-  // * START =======> RJ4 Email  @Tenant
-  const transporterRJ4 = nodemailer.createTransport(
-    sgTransport({
-      auth: {
-        api_key: process.env.SENDGRID_API,
-      },
-    })
-  );
-
-  let optionsRJ4 = {
-    viewEngine: {
-      extname: ".handlebars",
-      layoutsDir: "views/",
-      defaultLayout: "rj4Email",
-    },
-    viewPath: "views/",
-  };
-
-  transporterRJ4.use("compile", hbs(optionsRJ4));
-
-  const tenantEmail = {
-    from: "Rimbo info@rimbo.rent",
-    to: testEmail, // tenant's email
-    subject: "¡Te damos la bienvenida!",
-    // text: "",
-    attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
-      },
-    ],
-    template: "rj4Email",
-    context: {
-      tenantsName,
-      agencyName,
-      rentalAddress,
-      rentalPostalCode,
-      rentalCity,
-      agencyName,
-      rentalAddress,
-      randomID,
-    },
-  };
-
-  transporterRJ4.sendMail(tenantEmail, (err, data) => {
-    if (err) {
-      console.log("There is an error here...!" + err);
-    } else {
-      console.log("Email sent!");
-    }
-  });
-  // * END =======> RJ4 Email  @Tenant
-
-  // * START =======> RJD Email  @Rimbo
-  const transporterRJD = nodemailer.createTransport(
-    sgTransport({
-      auth: {
-        api_key: process.env.SENDGRID_API,
-      },
-    })
-  );
-
-  let optionsRJD = {
-    viewEngine: {
-      extname: ".handlebars",
-      layoutsDir: "views/",
-      defaultLayout: "rjdEmail",
-    },
-    viewPath: "views/",
-  };
-
-  transporterRJD.use("compile", hbs(optionsRJD));
-
-  const RimboEmail = {
-    from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo email
-    subject: `Nuevo inquilino registrado por ${agencyName}`,
-    text: "",
-    attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
-      },
-    ],
-    template: "rjdEmail",
-    context: {
-      agencyName,
-      agencyContactPerson,
-      agencyEmailPerson,
-      agencyPhonePerson,
-      tenantsName,
-      tenantsEmail,
-      tenantsPhone,
-      rentAmount,
-      product,
-      rentDuration,
-      rentalAddress,
-      rentalCity,
-      rentalPostalCode,
-    },
-  };
-
-  transporterRJD.sendMail(RimboEmail, (err, data) => {
-    if (err) {
-      console.log("There is an error here...!" + err);
-    } else {
-      console.log("Email sent!");
-    }
-  });
-  // * END =======> RJD Email  @Rimbo
 
   res.status(200).json();
 };
 // ? =======>  SPANISH VERSION END ==============================>
 ////////////////////////////////////////////////////////////////
 // ? =======>  ENGLISH VERSION START ==============================>
-// ! RJ1 Form => RJ3, RJ4, RJD Emails
-const sendRJ1FormEmailsEn = async (req, res) => {
+// ! F1SC Form => E1R
+const sendF1SCFormEmailsEn = async (req, res) => {
   const {
+    agencyName,
     tenantsName,
     tenantsEmail,
     tenantsPhone,
-    agencyName,
-    agencyContactPerson,
-    agencyEmailPerson,
-    agencyPhonePerson,
-    rentalAddress,
-    rentalPostalCode,
-    rentalCity,
-    rentAmount,
-    product,
-    rentDuration,
+    tenantsAddress,
+    tenantsZipCode,
+    documentType,
+    documentNumber,
+    monthlyNetIncome,
+    jobType,
+    documentImageFront,
+    documentImageBack,
     randomID,
+    rentAmount,
+    acceptanceCriteria,
+    rentStartDate,
+    rentEndDate,
+    tenancyID,
+    building,
+    room,
   } = req.body;
 
   // * START =======> RJ3 Email  @PM/Agency
-  const transporterRJ3 = nodemailer.createTransport(
+  const transporterE1R = nodemailer.createTransport(
     sgTransport({
       auth: {
         api_key: process.env.SENDGRID_API,
@@ -244,21 +143,21 @@ const sendRJ1FormEmailsEn = async (req, res) => {
     })
   );
 
-  let optionsRJ3 = {
+  let optionsE1R = {
     viewEngine: {
       extname: ".handlebars",
       layoutsDir: "views/",
-      defaultLayout: "rj3EmailEn",
+      defaultLayout: "E1REmailEn",
     },
     viewPath: "views/",
   };
 
-  transporterRJ3.use("compile", hbs(optionsRJ3));
+  transporterE1R.use("compile", hbs(optionsE1R));
 
-  const PMEmail = {
+  const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // PM/Agency email
-    subject: "Tenant registered correctly",
+    to: testEmail, // Rimbo Email
+    subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
       {
@@ -267,27 +166,37 @@ const sendRJ1FormEmailsEn = async (req, res) => {
         cid: "rimbologo",
       },
       {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
       },
     ],
-    template: "rj3EmailEn",
+    template: "E1REmailEn",
     context: {
-      agencyContactPerson,
+      agencyName,
       tenantsName,
-      tenantsPhone,
       tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      monthlyNetIncome,
+      jobType,
+      documentImageFront,
+      documentImageBack,
+      randomID,
       rentAmount,
-      product,
-      rentDuration,
-      rentalAddress,
-      rentalPostalCode,
-      rentalCity,
+      acceptanceCriteria,
+      rentStartDate,
+      rentEndDate,
+      tenancyID,
+      building,
+      room,
     },
   };
 
-  transporterRJ3.sendMail(PMEmail, (err, data) => {
+  transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
     } else {
@@ -296,131 +205,8 @@ const sendRJ1FormEmailsEn = async (req, res) => {
   });
   // * END =======> RJ3 Email  @PM/Agency
 
-  // * START =======> RJ4 Email  @Tenant
-  const transporterRJ4 = nodemailer.createTransport(
-    sgTransport({
-      auth: {
-        api_key: process.env.SENDGRID_API,
-      },
-    })
-  );
-
-  let optionsRJ4 = {
-    viewEngine: {
-      extname: ".handlebars",
-      layoutsDir: "views/",
-      defaultLayout: "rj4EmailEn",
-    },
-    viewPath: "views/",
-  };
-
-  transporterRJ4.use("compile", hbs(optionsRJ4));
-
-  const tenantEmail = {
-    from: "Rimbo info@rimbo.rent",
-    to: testEmail, // tenant's email
-    subject: "Warm welcome!",
-    // text: "",
-    attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
-      },
-    ],
-    template: "rj4EmailEn",
-    context: {
-      tenantsName,
-      agencyName,
-      rentalAddress,
-      rentalPostalCode,
-      rentalCity,
-      agencyName,
-      rentalAddress,
-      randomID,
-    },
-  };
-
-  transporterRJ4.sendMail(tenantEmail, (err, data) => {
-    if (err) {
-      console.log("There is an error here...!" + err);
-    } else {
-      console.log("Email sent!");
-    }
-  });
-  // * END =======> RJ4 Email  @Tenant
-
-  // * START =======> RJD Email  @Rimbo
-  const transporterRJD = nodemailer.createTransport(
-    sgTransport({
-      auth: {
-        api_key: process.env.SENDGRID_API,
-      },
-    })
-  );
-
-  let optionsRJD = {
-    viewEngine: {
-      extname: ".handlebars",
-      layoutsDir: "views/",
-      defaultLayout: "rjdEmailEn",
-    },
-    viewPath: "views/",
-  };
-
-  transporterRJD.use("compile", hbs(optionsRJD));
-
-  const RimboEmail = {
-    from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo email
-    subject: `New tenant added by ${agencyName}`,
-    text: "",
-    attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
-        filename: "badi-logo.png",
-        path: "./views/images/badi-logo.png",
-        cid: "badilogo",
-      },
-    ],
-    template: "rjdEmailEn",
-    context: {
-      agencyName,
-      agencyContactPerson,
-      agencyEmailPerson,
-      agencyPhonePerson,
-      tenantsName,
-      tenantsEmail,
-      tenantsPhone,
-      rentAmount,
-      product,
-      rentDuration,
-      rentalAddress,
-      rentalCity,
-      rentalPostalCode,
-    },
-  };
-
-  transporterRJD.sendMail(RimboEmail, (err, data) => {
-    if (err) {
-      console.log("There is an error here...!" + err);
-    } else {
-      console.log("Email sent!");
-    }
-  });
-  // * END =======> RJD Email  @Rimbo
-
   res.status(200).json();
 };
 // ? =======> ENGLISH VERSION END ==============================>
 
-export { sendRJ1FormEmails, sendRJ1FormEmailsEn };
+export { sendF1SCFormEmails, sendF1SCFormEmailsEn };

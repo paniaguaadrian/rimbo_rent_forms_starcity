@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { withNamespaces } from "react-i18next";
 import Input from "../Input";
-import InputCheck from "../InputCheck";
 import Button from "../Button";
 import { isProperty } from "./validation";
 import { UPDATE_PROPERTY_INFO } from "./constants";
@@ -101,40 +100,6 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             />
           </div>
         </div>
-      </div>
-      <div className={styles.TermsContainer}>
-        <InputCheck
-          type="checkbox"
-          name="isAgentAccepted"
-          id="terms"
-          value={tenancy.propertyDetails.isAgentAccepted}
-          placeholder="Accept our terms and conditions"
-          onChange={(e) => handleProperty(e)}
-          required
-        />
-        <p>
-          {t("F1SC.stepZero.pp1")}{" "}
-          <a
-            href="https://rimbo.rent/en/privacy-policy/"
-            target="_blank"
-            rel="noreferrer"
-            className="link-tag"
-          >
-            {" "}
-            {t("F1SC.stepZero.pp2")}
-          </a>{" "}
-          {t("F1SC.stepZero.pp3")}{" "}
-          <a
-            href="https://rimbo.rent/en/cookies-policy/"
-            target="_blank"
-            rel="noreferrer"
-            className="link-tag"
-          >
-            {" "}
-            {t("F1SC.stepZero.pp4")}
-          </a>
-          .
-        </p>
       </div>
 
       <div className={styles.ButtonContainer}>

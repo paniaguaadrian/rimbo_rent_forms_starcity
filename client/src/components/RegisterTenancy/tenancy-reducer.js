@@ -16,7 +16,6 @@ export const DefaultTenancy = {
     acceptanceCriteria: "",
     rentStartDate: "",
     rentEndDate: "",
-    isAgentAccepted: true,
   },
 
   tenantContactDetails: {
@@ -33,6 +32,7 @@ export const DefaultTenancy = {
     // documentImageBack: "",
     monthlyNetIncome: "",
     jobType: "",
+    isAgentAccepted: true,
   },
 };
 
