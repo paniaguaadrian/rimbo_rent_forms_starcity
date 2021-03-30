@@ -16,14 +16,13 @@ Button {
   background: $gradient;
 
   @include xl {
-    // margin-left: 1rem !important;
     width: 8rem;
     height: 2rem;
     font-size: 1rem !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     font-family: Nunito, sans-serif;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: ease-in-out 0.2s;
     touch-action: manipulation;
     color: $white;
     border: none;

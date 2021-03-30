@@ -6,6 +6,7 @@ import { nanoid } from "nanoid";
 
 // Styles
 import styles from "../RegisterTenancy/register-user.module.scss";
+import selectStyles from "../InputSelect/input.select.module.scss";
 
 // Validation
 import { isMoreTenant } from "./validation";
@@ -268,14 +269,14 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 />
               </div>
               <div className={styles.FormLeft}>
-                <div className={styles.selectContainer}>
-                  <label className={styles.selectLabel} htmlFor="jobType">
+                <div className={selectStyles.selectContainer}>
+                  <label className={selectStyles.selectLabel} htmlFor="jobType">
                     {t("RJ2.jobType")}
                   </label>
                   <select
                     required
                     name="jobType"
-                    className={styles.selectInput}
+                    className={selectStyles.selectInput}
                     value={tenancy.tenantPersonalDetails.jobType}
                     onChange={(e) => handleTenant(e)}
                     error={errors.jobType}
@@ -378,14 +379,17 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             </div>
             <div className={styles.GroupInput}>
               <div className={styles.FormLeft}>
-                <div className={styles.selectContainer}>
-                  <label className={styles.selectLabel} htmlFor="documentType">
+                <div className={selectStyles.selectContainer}>
+                  <label
+                    className={selectStyles.selectLabel}
+                    htmlFor="documentType"
+                  >
                     {t("RJ2.documentType")}
                   </label>
                   <select
                     required
                     name="documentType"
-                    className={styles.selectInput}
+                    className={selectStyles.selectInput}
                     value={tenancy.tenantPersonalDetails.documentType}
                     onChange={(e) => handleTenant(e)}
                     error={errors.documentType}

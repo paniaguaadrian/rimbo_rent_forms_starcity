@@ -140,23 +140,6 @@
   }
 }
 
-// .FormIntern {
-//   @include xl {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//   }
-// }
-
-// .FormLeft {
-//   @include xl {
-//     display: flex;
-//     flex-direction: column;
-//     margin: 0 2rem;
-//     width: 25%;
-//   }
-// }
-
 .FormRight {
   @include xl {
     display: flex;
@@ -188,67 +171,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     text-align: center;
-  }
-}
-
-.selectContainer {
-  margin-bottom: 4rem;
-  font-family: Nunito, sans-serif;
-  outline: none;
-  display: flex;
-  flex-direction: column;
-  @include xl {
-    margin-bottom: 3rem;
-    font-family: Nunito, sans-serif;
-    outline: none;
-    display: flex;
-    flex-direction: column;
-  }
-  .selectLabel {
-    color: $primary-color;
-    font-weight: 600;
-    font-size: 1.7rem;
-    outline: none;
-    @include xl {
-      color: $primary-color;
-      font-weight: 600;
-      font-size: 1rem;
-      outline: none;
-    }
-  }
-  .selectInput {
-    height: 2.5em;
-    padding: 0.4em 0.8em;
-    border-radius: 20px;
-    border: 1px solid $tertiary-color;
-    background-color: none;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: rgba(2, 2, 2, 0.575);
-    background-color: white;
-    -webkit-appearance: none;
-    cursor: pointer;
-    @include xl {
-      height: 2.2rem;
-      // width: 100%;
-      padding: 0.4em 0.8em;
-      border-radius: 20px;
-      border: 1px solid $tertiary-color;
-      background-color: none;
-      font-size: 0.8rem;
-      margin-top: 1rem;
-      color: rgba(2, 2, 2, 0.575);
-      background-color: white;
-      -webkit-appearance: none;
-      cursor: pointer;
-    }
-
-    &:active,
-    &:focus {
-      border-color: $primary-color;
-      outline: none;
-      background-color: none !important;
-    }
   }
 }
 

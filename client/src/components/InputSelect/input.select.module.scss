@@ -1,8 +1,8 @@
 @import "../../styles/variables";
 @import "../../styles/breakpoint";
 
-.InputFile {
-  margin-bottom: 3.5rem;
+.selectContainer {
+  margin-bottom: 4rem;
   font-family: Nunito, sans-serif;
   outline: none;
   display: flex;
@@ -14,8 +14,7 @@
     display: flex;
     flex-direction: column;
   }
-
-  label {
+  .selectLabel {
     color: $primary-color;
     font-weight: 500;
     font-size: 1.7rem;
@@ -27,52 +26,38 @@
       outline: none;
     }
   }
-
-  input {
+  .selectInput {
     height: 2.5em;
-    width: 100%;
     padding: 0.4em 0.8em;
-    border-radius: none;
-    border: none;
-    font-size: 1.1rem;
+    border-radius: 20px;
+    border: 1px solid $tertiary-color;
+    background-color: none;
+    font-size: 1.2rem;
     margin-top: 1rem;
-
+    color: rgba(2, 2, 2, 0.575);
+    background-color: white;
+    -webkit-appearance: none;
+    cursor: pointer;
     @include xl {
-      height: 2.3em;
-      width: 20rem;
-      padding: 0;
-
-      border-radius: none;
-      border-bottom: 1px solid $tertiary-color;
+      height: 2.2rem;
+      // width: 100%;
+      padding: 0.4em 0.8em;
+      border-radius: 20px;
+      border: 1px solid $tertiary-color;
+      background-color: none;
       font-size: 0.8rem;
       margin-top: 1rem;
+      color: rgba(2, 2, 2, 0.575);
+      background-color: white;
+      -webkit-appearance: none;
+      cursor: pointer;
     }
 
     &:active,
     &:focus {
       border-color: $primary-color;
       outline: none;
-    }
-  }
-}
-
-.InputErrorContainer {
-  margin-top: 1rem;
-  margin-left: 0.6rem;
-  @include xl {
-    margin-top: 1rem;
-    margin-left: 0.6rem;
-  }
-  .InputError {
-    color: $danger;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    @include xl {
-      color: $danger;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-top: 2rem;
+      background-color: none !important;
     }
   }
 }

@@ -1,17 +1,16 @@
 // React Components
 import React from "react";
 
-//Material Ui Icons
+// Material Ui Icons
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
 
 // Images
 import RimboLogoWhite from "../../images/rimbo_logo_white.png";
-// import RimboLogo from "../../images/rimbo-logo.png";
 
 // Styles imported
 import styles from "./footer.module.scss";
-// const green = "#01d2cc";
+
 const Footer = () => {
   return (
     <div className={styles.FooterContainer}>

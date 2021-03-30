@@ -17,7 +17,7 @@ import { UPDATE_NEWTENANT_INFO } from "./tenantStripe-constants";
 import { withNamespaces } from "react-i18next";
 import i18n from "../../i18n";
 
-import NavBar from "../NavBarCard/NavBar";
+import NavBar from "../NavBarCentered/NavBar";
 
 import RimboLogo from "../../images/rimbo-logo.png";
 import StripeLogo from "../../images/secure-payments.png";

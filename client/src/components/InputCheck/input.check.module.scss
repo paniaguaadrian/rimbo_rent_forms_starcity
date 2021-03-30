@@ -2,13 +2,13 @@
 @import "../../styles/breakpoint";
 
 .InputCheck {
-  margin-bottom: 0rem;
+  margin: 0 auto;
   font-family: Nunito, sans-serif;
   outline: none;
   display: flex;
   flex-direction: column;
   @include xl {
-    margin-bottom: 0rem;
+    margin: 0 auto;
     font-family: Nunito, sans-serif;
     outline: none;
     display: flex;
@@ -25,11 +25,11 @@
     margin-right: 1rem;
 
     @include xl {
-      height: 1rem;
-      width: 1rem;
+      height: 1.2rem;
+      width: 1.2rem;
       padding: 0.4em 0.8em;
-      border-radius: 25px;
-      border: 1px solid $tertiary-color;
+      border-radius: 50px;
+      border: 1px solid $tertiary-color !important;
       font-size: 1rem;
       margin-right: 1rem;
     }

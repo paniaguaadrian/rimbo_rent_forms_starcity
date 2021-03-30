@@ -20,7 +20,11 @@ const NavBar = () => {
 
   return (
     <div className={styles.NavBarContainer}>
-      <img className={styles.BadiImage} src={StarCityLogo} alt="Badi Logo" />
+      <img
+        className={styles.LogoImage}
+        src={StarCityLogo}
+        alt="Starcity Logo"
+      />
 
       <div className={styles.ToggleButtonContainer}>
         <button
