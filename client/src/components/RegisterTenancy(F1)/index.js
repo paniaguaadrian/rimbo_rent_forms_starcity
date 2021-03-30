@@ -1,15 +1,26 @@
+// React Components
 import React, { useReducer, useState } from "react";
-import { TenancyReducer, DefaultTenancy } from "./tenancy-reducer";
-import styles from "./register-user.module.scss";
+
+// Custom Components
 import FormSteps from "./form-steps";
-import { withNamespaces } from "react-i18next";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
+
+// Reducer import
+import { TenancyReducer, DefaultTenancy } from "./tenancy-reducer";
+
+// Styles imported
+import styles from "./register-user.module.scss";
+
+// Multilanguage
+import { withNamespaces } from "react-i18next";
+import i18n from "../../i18n";
 
 const RegisterTenancy = ({ t }) => {
   let [step, setStep] = useState(0);
 
   const [tenancy, setTenancy] = useReducer(TenancyReducer, DefaultTenancy);
+
   let steps = FormSteps(step, setStep, tenancy, setTenancy);
 
   return (
@@ -22,12 +33,18 @@ const RegisterTenancy = ({ t }) => {
             <div className={styles.ExtraInfoContainer}>
               <p>{t("F1SC.header.subtitleOne")}</p>
               <p>{t("F1SC.header.subtitleTwo")}</p>
-              {/* <p>{t("F1SC.header.subtitleThree")}</p> */}
             </div>
-            <h4>
-              Step {step + 1} / {steps.length - 1} -{" "}
-              <span>{steps[`${step}`].title}</span>
-            </h4>
+            {i18n.language === "es" ? (
+              <h4>
+                Paso {step + 1} / {steps.length - 1} -{" "}
+                <span>{steps[`${step}`].titleEs}</span>
+              </h4>
+            ) : (
+              <h4>
+                Step {step + 1} / {steps.length - 1} -{" "}
+                <span>{steps[`${step}`].title}</span>
+              </h4>
+            )}
           </div>
         ) : null}
 

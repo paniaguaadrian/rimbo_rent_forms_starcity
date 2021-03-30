@@ -2,16 +2,26 @@
 @import "../../styles/_breakpoint";
 
 .NavBarContainer {
-  background: rgb(255, 255, 255);
-  height: 2rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @include xl {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .LogoImage {
-    height: 2rem !important;
+    height: 2.8rem !important;
     margin-left: 2rem;
+    @include xl {
+      height: 2rem !important;
+      margin-left: 2rem;
+    }
   }
 
   .ToggleButtonContainer {
@@ -31,7 +41,7 @@
 
   .LanguageLogo {
     margin: 0 0 !important;
-    height: 2rem !important;
+    height: 2.5rem !important;
     @include xl {
       margin: 0 0 !important;
       height: 1.3rem !important;

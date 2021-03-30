@@ -8,7 +8,7 @@ import { withNamespaces } from "react-i18next";
 import WhatsappBubble from "./components/WhatsappBubble/WhatsappBubble";
 
 // Forms
-import RegisterTenancy from "./components/RegisterTenancy";
+import RegisterTenancy from "./components/RegisterTenancy(F1)";
 import StripeHandler from "./components/RegisterTenantCard_RJ3/StripeHandlerComponent";
 
 // Approved screens

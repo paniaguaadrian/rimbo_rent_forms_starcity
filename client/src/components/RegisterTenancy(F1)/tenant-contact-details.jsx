@@ -5,7 +5,7 @@ import Input from "../Input";
 import Button from "../Button";
 import { isTenant } from "./validation";
 import { UPDATE_TENANT_CONTACT_INFO } from "./constants";
-import styles from "../RegisterTenancy/register-user.module.scss";
+import styles from "./register-user.module.scss";
 
 const TenantDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const [errors, setErrors] = useState({});

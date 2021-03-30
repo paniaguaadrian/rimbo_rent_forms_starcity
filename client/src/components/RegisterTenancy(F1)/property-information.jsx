@@ -1,11 +1,22 @@
+// React Components
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { withNamespaces } from "react-i18next";
+
+// Custom Components
 import Input from "../Input";
 import Button from "../Button";
+
+// Validation
 import { isProperty } from "./validation";
+
+// Constants
 import { UPDATE_PROPERTY_INFO } from "./constants";
-import styles from "../RegisterTenancy/register-user.module.scss";
+
+// Styles imported
+import styles from "./register-user.module.scss";
+
+// Multilanguage
+import { withNamespaces } from "react-i18next";
 
 const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const [errors, setErrors] = useState({});
@@ -102,7 +113,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         </div>
       </div>
 
-      <div className={styles.ButtonContainer}>
+      <div className={styles.AloneButtonContainer}>
         <Button type="submit">{t("nextStepButton")}</Button>
       </div>
     </form>

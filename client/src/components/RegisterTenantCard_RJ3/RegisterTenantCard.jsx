@@ -25,7 +25,7 @@ import StarCityImage from "../../images/starcity-image.png";
 
 // Styles
 import Loader from "react-loader-spinner";
-import styles from "../RegisterTenancy/register-user.module.scss";
+import styles from "../RegisterTenancy(F1)/register-user.module.scss";
 import style from "./register-card.module.scss";
 import "./CardSection.css";
 const CARD_ELEMENT_OPTIONS = {

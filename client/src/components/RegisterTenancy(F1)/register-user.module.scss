@@ -12,13 +12,11 @@
 }
 
 .Register {
-  padding: 0 3rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
+  padding: 0 4rem;
 
   @include xl {
-    font-size: 1rem;
-    padding: 0 3rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
   }
 
   h1,
@@ -56,75 +54,66 @@
       padding: 0 20rem;
     }
   }
+
+  h4 {
+    padding-bottom: 0;
+    font-size: 1.5rem;
+
+    @include xl {
+      padding-bottom: 0rem;
+      font-size: 1.2rem;
+    }
+  }
+  h4 span {
+    font-weight: 500;
+  }
+}
+
+.ExtraInfoContainer {
+  margin: 1.5rem 0;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  @include xl {
+    margin: 1.5rem 0;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  span {
+    font-weight: 600 !important;
+    text-decoration: underline;
+  }
+
   p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: $danger;
     text-align: center;
+    padding: 0 4rem;
 
     @include xl {
       margin: 0 auto;
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 400;
       color: $danger;
       text-align: center;
       padding: 0 20rem;
     }
   }
-  h4 {
-    padding-bottom: 0;
-    font-size: 2.2rem;
-
-    @include xl {
-      padding-bottom: 0rem;
-      font-size: 1rem;
-    }
-  }
-  h4 span {
-    font-weight: 600;
-  }
-}
-
-.ExtraInfoContainer {
-  margin: 3rem 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  @include xl {
-    margin: 1.5rem 0;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  p {
-    margin-bottom: 0.5rem;
-    padding: 0 2rem;
-    @include xl {
-      margin-bottom: 0.5rem;
-      padding: 0 1rem;
-      width: 75%;
-    }
-  }
-  span {
-    font-weight: 600 !important;
-    text-decoration: underline;
-  }
 }
 
 .FormContent {
   display: flex;
-  // width: 100%;
   height: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0 3rem;
-  margin-top: 4rem;
+  margin: 1.5rem 2rem;
   flex: 1 0 auto;
-  padding: 2rem 2rem;
+  padding: 1.5rem;
   border-radius: 14px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
@@ -134,8 +123,10 @@
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
     margin-top: 1rem;
-    padding: 2rem 2rem;
+    padding: 2rem;
     box-shadow: none;
   }
 }
@@ -149,11 +140,12 @@
   }
 }
 
+// ===> Buttons Container Style
 .AloneButtonContainer {
   margin: 3rem 0;
-  text-align: right;
+  text-align: center;
   @include xl {
-    margin: 0rem 0;
+    margin: 0;
     text-align: center;
   }
 }
@@ -198,7 +190,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 35rem;
   }
 
   p {
@@ -484,40 +476,13 @@
   }
 }
 
-.FormContent {
-  display: flex;
-  //   width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 0 3rem;
-  margin-top: 4rem;
-  flex: 1 0 auto;
-  padding: 2rem 2rem;
-  border-radius: 14px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-  @include xl {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 1rem;
-    padding: 2rem 2rem;
-    box-shadow: none;
-  }
-}
-
 .FormIntern {
   @include xl {
     margin: 0 auto;
+    width: 45rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center !important;
   }
 }
 
@@ -543,6 +508,6 @@
   @include xl {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
   }
 }
