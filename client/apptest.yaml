@@ -9,39 +9,15 @@ handlers:
     static_files: build/index.html
     upload: build/index.html
     secure: always
-  - url: /register/agent
+  - url: /register/tenancy
     static_files: build/index.html
     upload: build/index.html
     secure: always
-  - url: /register/tenant/.*
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/annex/.*
+  - url: /register/tenancy/.*/approved
     static_files: build/index.html
     upload: build/index.html
     secure: always
   - url: /register/card/.*
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/rj2/.*/approved
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/rj2/.*/rejected
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/rj2/.*/pm/approved
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/rj3/.*/card/approved
-    static_files: build/index.html
-    upload: build/index.html
-    secure: always
-  - url: /register/rjs/.*/service-start
     static_files: build/index.html
     upload: build/index.html
     secure: always

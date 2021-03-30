@@ -513,10 +513,10 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         <div className={styles.CompleteContainer}>
           <div className={styles.CompleteText}>
             <h1>{t("RJ2.completedTitle")}</h1>
-            <h3>{t("RJ2.completedSubtitle")}</h3>
+            {/* <h3>{t("RJ2.completedSubtitle")}</h3> */}
             <p>
               {t("RJ2.completeSubtextOne")}
-              <b>{responseData?.tenant?.tenantsName}</b>,{" "}
+
               {t("RJ2.completeSubtextTwo")}
             </p>
             <h3>{t("RJ2.completeRegards")}</h3>

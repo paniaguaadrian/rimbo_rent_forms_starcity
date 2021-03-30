@@ -9,9 +9,9 @@
   },
   "F1SC": {
     "header": {
-      "title": "Registra a tu inquilino para su evaluación",
+      "title": "Registra a tu inquilino",
       "subtitleOne": "Completa los campos.",
-      "subtitleTwo": "Rimbo lo evalúa en las próximas 24 horas.",
+      "subtitleTwo": "El inquilino recibirá un email para registrar su tarjeta de débito",
       "subtitleThree": "Recibirás una respuesta por correo electrónico."
     },
     "stepZero": {
@@ -106,8 +106,8 @@
     "checkboxFive": "para ofrecerte los servicios de Rimbo",
     "completedTitle": "El formulario ha sido completado con éxito",
     "completedSubtitle": "Toda la información ha sido registrada",
-    "completeSubtextOne": "Gracias por tu tiempo ",
-    "completeSubtextTwo": "nos pondremos en contacto contigo en breves para darte más detlales del proceso.",
+    "completeSubtextOne": "Gracias por tu tiempo. ",
+    "completeSubtextTwo": "El inquilino recibirá un correo en breve para completar su registro.",
     "completeRegards": "Un cordial saludo"
   },
   "RJ3": {

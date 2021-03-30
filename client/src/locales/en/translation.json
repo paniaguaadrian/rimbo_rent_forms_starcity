@@ -11,7 +11,7 @@
     "header": {
       "title": "List your tenant",
       "subtitleOne": "Fill out the fields.",
-      "subtitleTwo": "Rimbo screens in 24 hours.",
+      "subtitleTwo": "The tenant will receive an email to register the debit card",
       "subtitleThree": "Receive a response via email."
     },
     "stepZero": {
@@ -104,8 +104,8 @@
     "checkboxFive": "to offer you Rimbo services.",
     "completedTitle": "The form has been completed successfully",
     "completedSubtitle": "All data has been successfully completed",
-    "completeSubtextOne": "Thanks for your time ",
-    "completeSubtextTwo": "we will contact you shortly to give you more details of the process.",
+    "completeSubtextOne": "Thanks for your time. ",
+    "completeSubtextTwo": "The tenant will receive an email shortly to complete the process.",
     "completeRegards": "Best regards"
   },
   "RJ3": {

@@ -5,7 +5,7 @@ import hbs from "nodemailer-express-handlebars";
 // * Rimbo rent emails
 // Production / Development
 // const rimboEmail = "info@rimbo.rent";
-const testEmail = "paniaguasanchezadrian@gmail.com";
+const testEmail = "victor@rimbo.rent";
 
 // ? =======>  SPANISH VERSION START ==============================>
 // ! F1SC Form => E1R (email to Rimbo)

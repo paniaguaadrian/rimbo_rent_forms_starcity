@@ -287,7 +287,7 @@ a{
 }
 
 .logo-image{
-	width: 5rem;
+	width: 10rem;
 }
 
 .btn-rimbo{
@@ -379,8 +379,8 @@ text-decoration: none;
             <table>
             	<tr>
             		<td>
-            			<div class="text" style="padding: 0 3em; text-align: center;">
-							<h3>Great news,  {{tenantsName}},</h3>			
+            			<div class="text" style="padding: 0 3em; text-align: left;">
+							<h3>Great news,  {{tenantsName}}!</h3>			
             				
             			</div>
             		</td>
@@ -393,8 +393,8 @@ text-decoration: none;
 		        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h3>We are very excited that you want to join our community in {{building}}</h3>
+		            	<div class="heading-section" style="text-align: left; padding: 0 30px;">
+		              	<h3>We are very excited that you want to join our community in <b>{{building}}</b></h3>
 
 		            	</div>
 		          </tr><!-- end: tr -->
@@ -404,7 +404,7 @@ text-decoration: none;
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px; color: #6aa3a1;">
-		              	<h2>There is only one important step left:</h2>
+		              	<h3><u>There is only one important step left:</u></h3>
 						 
 		              	
 		            	</div>
@@ -420,8 +420,34 @@ text-decoration: none;
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>Here at {{agencyName}} we believe you shouldn’t pay for something that hasn’t happened yet. This is why our rooms are deposit-free.</h3>
+								<h3>Here at {{agencyName}} we believe you shouldn’t pay for something that hasn’t happened yet. <b>This is why our rooms are deposit-free.</b></h3>
+								
+								
+							</div>
+						</td>
+					</tr>
+			</table>
+
+			<table>
+					<tr>
+						<td>
+							<div class="text" style="padding: 1em 3em; text-align: left;">
+								
+								
 								<h3>Just as always, you are responsible for taking care of the room and paying your rent on time.  But since we at {{agencyName}} trust our tenants, we won’t ask you to pay anything upfront, only in case something happens.</h3>
+								
+								
+							</div>
+						</td>
+					</tr>
+			</table>
+
+			<table>
+					<tr>
+						<td>
+							<div class="text" style="padding: 1em 3em; text-align: left;">
+								
+							
 								<h3>Register by clicking on the following link and  entering your debit card details. The card must be connected to the bank account where you receive your monthly income.</h3>
 								
 							</div>
@@ -429,11 +455,25 @@ text-decoration: none;
 					</tr>
 			</table>
 
+			   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0px 30px; color: #6aa3a1;">
+		              	{{!-- <button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/card/{{randomID}}">¡Empieza tu alquiler!(DEV)</a></button> --}}
+
+						<button class='btn-rimbo' type="button"><a href="https://rimbo-test.ew.r.appspot.com/register/card/{{randomID}}">¡Empieza tu alquiler!</a></button>
+
+						{{!-- <button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/card/{{randomID}}">¡Empieza tu alquiler!(PROD2)</a></button> --}}
+						  
+		          </tr><!-- end: tr -->
+					
+			</table>
+
 			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px; color: #6aa3a1;">
-		              	<h2>Welcome to the deposit revolution!</h2>
+		              	<h3>Welcome to the deposit revolution!</h3>
 						 
 		              	
 		            	</div>
@@ -441,19 +481,7 @@ text-decoration: none;
 					
 			</table>
 
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		          <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0px 30px; color: #6aa3a1;">
-		              	<button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/card/{{randomID}}">¡Empieza tu alquiler!(DEV)</a></button>
-
-						<button class='btn-rimbo' type="button"><a href="https://rimbo-test.ew.r.appspot.com/register/card/{{randomID}}">¡Empieza tu alquiler!(PROD)</a></button>
-
-						<button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/card/{{randomID}}">¡Empieza tu alquiler!(PROD2)</a></button>
-						  
-		          </tr><!-- end: tr -->
-					
-			</table>
+         
 
 			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>

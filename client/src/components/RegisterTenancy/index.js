@@ -22,7 +22,7 @@ const RegisterTenancy = ({ t }) => {
             <div className={styles.ExtraInfoContainer}>
               <p>{t("F1SC.header.subtitleOne")}</p>
               <p>{t("F1SC.header.subtitleTwo")}</p>
-              <p>{t("F1SC.header.subtitleThree")}</p>
+              {/* <p>{t("F1SC.header.subtitleThree")}</p> */}
             </div>
             <h4>
               Step {step + 1} / {steps.length - 1} -{" "}
