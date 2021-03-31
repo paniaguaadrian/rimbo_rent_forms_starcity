@@ -25,7 +25,9 @@
       "pp1": " By submitting this form, you understand and accept that we use your information in accordance with our",
       "pp2": "privacy policy",
       "pp3": "and",
-      "pp4": "cookies policy"
+      "pp4": "cookies policy",
+      "linkPrivacy": "https://rimbo.rent/en/privacy-policy/",
+      "linkCookies": "https://rimbo.rent/en/cookies-policy/"
     },
     "stepOne": {
       "tenantName": "Member's full name",

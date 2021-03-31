@@ -25,7 +25,9 @@
       "pp1": " Al enviar este formulario, comprendes y aceptas que utilizamos tu información de acuerdo con nuestra",
       "pp2": "política de privacidad",
       "pp3": "y nuestra",
-      "pp4": "política de cookies"
+      "pp4": "política de cookies",
+      "linkPrivacy": "https://rimbo.rent/politica-privacidad/",
+      "linkCookies": "https://rimbo.rent/politica-cookies/"
     },
     "stepOne": {
       "tenantName": "Nombre completo del residente",

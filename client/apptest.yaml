@@ -9,6 +9,10 @@ handlers:
     static_files: build/index.html
     upload: build/index.html
     secure: always
+  - url: /terms
+    static_files: build/index.html
+    upload: build/index.html
+    secure: always
   - url: /register/tenancy
     static_files: build/index.html
     upload: build/index.html

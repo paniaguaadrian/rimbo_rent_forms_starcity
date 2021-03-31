@@ -484,7 +484,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             <p>
               {t("F1SC.stepZero.pp1")}{" "}
               <a
-                href="https://rimbo.rent/en/privacy-policy/"
+                href={t("F1SC.stepZero.linkPrivacy")}
                 target="_blank"
                 rel="noreferrer"
                 className="link-tag"
@@ -494,7 +494,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               </a>{" "}
               {t("F1SC.stepZero.pp3")}{" "}
               <a
-                href="https://rimbo.rent/en/cookies-policy/"
+                href={t("F1SC.stepZero.linkCookies")}
                 target="_blank"
                 rel="noreferrer"
                 className="link-tag"

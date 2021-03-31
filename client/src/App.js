@@ -11,7 +11,8 @@ import WhatsappBubble from "./components/WhatsappBubble/WhatsappBubble";
 import RegisterTenancy from "./components/RegisterTenancy(F1)";
 import StripeHandler from "./components/RegisterTenantCard_RJ3/StripeHandlerComponent";
 
-// Approved screens
+// Screens
+import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import ApprovedTenantRimbo from "./screens/approvedTenantRimbo/ApprovedTenantRimbo.jsx";
 
 // Normalize & Generic styles
@@ -20,6 +21,7 @@ import "./styles/generic.scss";
 const App = () => {
   return (
     <>
+      <Route exact path="/terms" component={TermsAndConditions} />
       <Route exact path="/register/tenancy" component={RegisterTenancy} />
       <Route
         exact

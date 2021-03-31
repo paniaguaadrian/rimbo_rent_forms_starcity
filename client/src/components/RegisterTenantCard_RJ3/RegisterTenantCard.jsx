@@ -306,7 +306,7 @@ const RegisterTenantCard = ({ t }) => {
                         <p>
                           {t("F2TT.checkBoxOne")}{" "}
                           <a
-                            href="https://rimbo.rent/politica-privacidad/"
+                            href="/terms"
                             target="_blank"
                             rel="noreferrer"
                             className="link-tag"
@@ -315,7 +315,7 @@ const RegisterTenantCard = ({ t }) => {
                           </a>
                           ,
                           <a
-                            href="https://rimbo.rent/politica-privacidad/"
+                            href={t("F1SC.stepZero.linkPrivacy")}
                             target="_blank"
                             rel="noreferrer"
                             className="link-tag"
@@ -325,7 +325,7 @@ const RegisterTenantCard = ({ t }) => {
                           </a>
                           ,
                           <a
-                            href="https://rimbo.rent/politica-privacidad/"
+                            href={t("F1SC.stepZero.linkCookies")}
                             target="_blank"
                             rel="noreferrer"
                             className="link-tag"
