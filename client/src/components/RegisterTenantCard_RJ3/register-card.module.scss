@@ -110,9 +110,12 @@
   margin-bottom: 6rem;
   padding: 1rem 4rem;
   @include xl {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     width: 25rem;
     padding: 1rem 1rem;
   }
@@ -251,7 +254,7 @@
     opacity: 1 !important;
     border-radius: 4px;
     width: 25rem;
-    height: 35rem;
+    height: auto;
     padding: 1.5rem 2rem;
   }
 }
@@ -353,7 +356,7 @@ input[type="text"]:focus {
   margin: 0 auto;
   margin-top: 1rem;
   @include xl {
-    margin: 0 2rem;
+    margin: 0 0.2rem;
     margin-top: 1rem;
   }
 }
@@ -425,6 +428,7 @@ input[type="text"]:focus {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 0 0;
   margin-top: 2rem;
   margin-bottom: 2rem;

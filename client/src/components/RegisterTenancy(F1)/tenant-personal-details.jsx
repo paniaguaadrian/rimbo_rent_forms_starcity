@@ -263,8 +263,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 type="number"
                 name="monthlyNetIncome"
                 value={tenancy.tenantPersonalDetails.monthlyNetIncome}
-                label={t("RJ2.monthlyNetIncome")}
-                placeholder={t("RJ2.monthlyNetIncomePL")}
+                label={t("F1SC.stepThree.monthlyNetIncome")}
+                placeholder={t("F1SC.stepThree.monthlyNetIncomePL")}
                 onChange={(e) => handleTenant(e)}
                 error={errors.monthlyNetIncome}
               />
@@ -272,7 +272,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             <div className={styles.FormLeft}>
               <div className={selectStyles.selectContainer}>
                 <label className={selectStyles.selectLabel} htmlFor="jobType">
-                  {t("RJ2.jobType")}
+                  {t("F1SC.stepThree.jobType")}
                 </label>
                 <select
                   required
@@ -282,34 +282,46 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                   onChange={(e) => handleTenant(e)}
                   error={errors.jobType}
                 >
-                  <option value="">{t("RJ2.jobTypePL")}</option>
+                  <option value="">{t("F1SC.stepThree.jobTypePL")}</option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeOne")}>
-                    {t("RJ2.jobTypeOne")}
+                  <option name="jobType" value={t("F1SC.stepThree.jobTypeOne")}>
+                    {t("F1SC.stepThree.jobTypeOne")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeTwo")}>
-                    {t("RJ2.jobTypeTwo")}
+                  <option name="jobType" value={t("F1SC.stepThree.jobTypeTwo")}>
+                    {t("F1SC.stepThree.jobTypeTwo")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeThree")}>
-                    {t("RJ2.jobTypeThree")}
+                  <option
+                    name="jobType"
+                    value={t("F1SC.stepThree.jobTypeThree")}
+                  >
+                    {t("F1SC.stepThree.jobTypeThree")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeFour")}>
-                    {t("RJ2.jobTypeFour")}
+                  <option
+                    name="jobType"
+                    value={t("F1SC.stepThree.jobTypeFour")}
+                  >
+                    {t("F1SC.stepThree.jobTypeFour")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeFive")}>
-                    {t("RJ2.jobTypeFive")}
+                  <option
+                    name="jobType"
+                    value={t("F1SC.stepThree.jobTypeFive")}
+                  >
+                    {t("F1SC.stepThree.jobTypeFive")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeSix")}>
-                    {t("RJ2.jobTypeSix")}
+                  <option name="jobType" value={t("F1SC.stepThree.jobTypeSix")}>
+                    {t("F1SC.stepThree.jobTypeSix")}
                   </option>
 
-                  <option name="jobType" value={t("RJ2.jobTypeSeven")}>
-                    {t("RJ2.jobTypeSeven")}
+                  <option
+                    name="jobType"
+                    value={t("F1SC.stepThree.jobTypeSeven")}
+                  >
+                    {t("F1SC.stepThree.jobTypeSeven")}
                   </option>
                 </select>
               </div>
@@ -333,8 +345,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                     <Input
                       id="googleInput"
                       {...getInputProps()}
-                      label={t("RJ2.tenantsAddress")}
-                      placeholder={t("RJ2.tenantsAddressPL")}
+                      label={t("F1SC.stepThree.tenantsAddress")}
+                      placeholder={t("F1SC.stepThree.tenantsAddressPL")}
                       required
                     />
                     <div className={styles.GoogleSuggestionContainer}>
@@ -371,8 +383,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 name="rentalPostalCode"
                 id="rentalPostalCode"
                 value={tenantsZipCode}
-                label={t("RJ2.tenantsZipCode")}
-                placeholder={t("RJ2.tenantsZipCodePL")}
+                label={t("F1SC.stepThree.tenantsZipCode")}
+                placeholder={t("F1SC.stepThree.tenantsZipCodePL")}
                 onChange={setTenantsZipCode}
                 disabled
               />
@@ -385,7 +397,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                   className={selectStyles.selectLabel}
                   htmlFor="documentType"
                 >
-                  {t("RJ2.documentType")}
+                  {t("F1SC.stepThree.documentType")}
                 </label>
                 <select
                   required
@@ -395,25 +407,34 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                   onChange={(e) => handleTenant(e)}
                   error={errors.documentType}
                 >
-                  <option value="">{t("RJ2.documentTypePL")}</option>
+                  <option value="">{t("F1SC.stepThree.documentTypePL")}</option>
 
-                  <option name="documentType" value={t("RJ2.documentTypeOne")}>
-                    {t("RJ2.documentTypeOne")}
-                  </option>
-
-                  <option name="documentType" value={t("RJ2.documentTypeTwo")}>
-                    {t("RJ2.documentTypeTwo")}
+                  <option
+                    name="documentType"
+                    value={t("F1SC.stepThree.documentTypeOne")}
+                  >
+                    {t("F1SC.stepThree.documentTypeOne")}
                   </option>
 
                   <option
                     name="documentType"
-                    value={t("RJ2.documentTypeThree")}
+                    value={t("F1SC.stepThree.documentTypeTwo")}
                   >
-                    {t("RJ2.documentTypeThree")}
+                    {t("F1SC.stepThree.documentTypeTwo")}
                   </option>
 
-                  <option name="documentType" value={t("RJ2.documentTypeFour")}>
-                    {t("RJ2.documentTypeFour")}
+                  <option
+                    name="documentType"
+                    value={t("F1SC.stepThree.documentTypeThree")}
+                  >
+                    {t("F1SC.stepThree.documentTypeThree")}
+                  </option>
+
+                  <option
+                    name="documentType"
+                    value={t("F1SC.stepThree.documentTypeFour")}
+                  >
+                    {t("F1SC.stepThree.documentTypeFour")}
                   </option>
                 </select>
               </div>
@@ -423,8 +444,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 type="text"
                 name="documentNumber"
                 value={tenancy.tenantPersonalDetails.documentNumber}
-                label={t("RJ2.documentNumber")}
-                placeholder={t("RJ2.documentNumberPL")}
+                label={t("F1SC.stepThree.documentNumber")}
+                placeholder={t("F1SC.stepThree.documentNumberPL")}
                 onChange={(e) => handleTenant(e)}
                 error={errors.documentNumber}
               />
@@ -435,7 +456,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               <InputFile
                 type="file"
                 name="DF"
-                label={t("RJ2.DF")}
+                label={t("F1SC.stepThree.DF")}
                 onChange={changeHandler}
                 required
               />
@@ -444,7 +465,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               <InputFile
                 type="file"
                 name="DB"
-                label={t("RJ2.DB")}
+                label={t("F1SC.stepThree.DB")}
                 onChange={changeHandler}
                 required
               />

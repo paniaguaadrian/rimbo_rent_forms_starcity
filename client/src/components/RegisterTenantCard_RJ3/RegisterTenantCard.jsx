@@ -210,7 +210,7 @@ const RegisterTenantCard = ({ t }) => {
 
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-        <title>{t("RJ3.header")}</title>
+        <title>{t("F2TT.header")}</title>
       </Helmet>
       <NavBar />
       {!isSuccessfullySubmitted ? (
@@ -304,16 +304,14 @@ const RegisterTenantCard = ({ t }) => {
                           onChange={(e) => handleNewTenant(e)}
                         />
                         <p>
-                          Enviando tus datos confirmas que has leído y aceptas
-                          los
+                          {t("F2TT.checkBoxOne")}{" "}
                           <a
                             href="https://rimbo.rent/politica-privacidad/"
                             target="_blank"
                             rel="noreferrer"
                             className="link-tag"
                           >
-                            {" "}
-                            Términos y condiciones
+                            {t("F2TT.checkBoxTwo")}
                           </a>
                           ,
                           <a
@@ -323,7 +321,7 @@ const RegisterTenantCard = ({ t }) => {
                             className="link-tag"
                           >
                             {" "}
-                            Política de Privacidad
+                            {t("F2TT.checkBoxThree")}
                           </a>
                           ,
                           <a
@@ -333,9 +331,9 @@ const RegisterTenantCard = ({ t }) => {
                             className="link-tag"
                           >
                             {" "}
-                            Política de Cookies
+                            {t("F2TT.checkBoxFour")}
                           </a>{" "}
-                          de Rimbo Rent.
+                          {t("F2TT.checkBoxFive")}
                         </p>
                       </div>
                       <div className={style.buttonContainer}>
@@ -349,7 +347,7 @@ const RegisterTenantCard = ({ t }) => {
                           />
                         ) : (
                           <button disabled={isProcessing || !stripe}>
-                            {t("RJ3.authorize")}
+                            {t("authorize")}
                           </button>
                         )}
                       </div>
@@ -375,15 +373,12 @@ const RegisterTenantCard = ({ t }) => {
         <div className={style.success}>
           <>
             <div className={style.hero_section_container}>
-              <h1>You are already part of StarCity!</h1>
+              <h1>{t("cardsuccess.title")}</h1>
             </div>
             <main className={style.form_full_container_success}>
               <div className={style.form_header_left_success}>
-                <p>Genial, ¡hemos recibido tus detalles!</p>
-                <p>
-                  Nos pondremos en contacto contigo en breve para completar el
-                  proceso.
-                </p>
+                <p>{t("cardsuccess.textOne")}</p>
+                <p>{t("cardsuccess.textTwo")}</p>
               </div>
               <div className={style.success_container_right}>
                 <img src={StarCityImage} alt="StarCity co-living logo" />
