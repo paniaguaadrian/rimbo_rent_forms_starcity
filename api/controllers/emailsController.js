@@ -8,7 +8,7 @@ import hbs from "nodemailer-express-handlebars";
 const testEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
-// ! F1SC Form => E1R (email to Rimbo)
+// ! F1SC Form => E1R (email to Rimbo) E1SC (email to Starcity)
 const sendF1SCFormEmails = async (req, res) => {
   const {
     agencyName,
@@ -33,8 +33,15 @@ const sendF1SCFormEmails = async (req, res) => {
     room,
   } = req.body;
 
-  // * START =======> RJ3 Email  @PM/Agency
   const transporterE1R = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  const transporterE1SC = nodemailer.createTransport(
     sgTransport({
       auth: {
         api_key: process.env.SENDGRID_API,
@@ -51,7 +58,17 @@ const sendF1SCFormEmails = async (req, res) => {
     viewPath: "views/",
   };
 
+  let optionsE1SC = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E1SCEmail",
+    },
+    viewPath: "views/",
+  };
+
   transporterE1R.use("compile", hbs(optionsE1R));
+  transporterE1SC.use("compile", hbs(optionsE1SC));
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
@@ -95,6 +112,48 @@ const sendF1SCFormEmails = async (req, res) => {
     },
   };
 
+  const StarcityEmail = {
+    from: "Rimbo info@rimbo.rent",
+    to: testEmail, // Starcity Email
+    subject: "Registro de inquilino correcto",
+    text: "",
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+      {
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
+      },
+    ],
+    template: "E1SCEmail",
+    context: {
+      agencyName,
+      tenantsName,
+      tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      monthlyNetIncome,
+      jobType,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      rentAmount,
+      acceptanceCriteria,
+      rentStartDate,
+      rentEndDate,
+      tenancyID,
+      building,
+      room,
+    },
+  };
+
   transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
@@ -102,7 +161,14 @@ const sendF1SCFormEmails = async (req, res) => {
       console.log("Email sent!");
     }
   });
-  // * END =======> RJ3 Email  @PM/Agency
+
+  transporterE1SC.sendMail(StarcityEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
   res.status(200).json();
 };
@@ -384,8 +450,15 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     room,
   } = req.body;
 
-  // * START =======> RJ3 Email  @PM/Agency
   const transporterE1R = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  const transporterE1SC = nodemailer.createTransport(
     sgTransport({
       auth: {
         api_key: process.env.SENDGRID_API,
@@ -402,7 +475,17 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     viewPath: "views/",
   };
 
+  let optionsE1SC = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E1SCEmailEn",
+    },
+    viewPath: "views/",
+  };
+
   transporterE1R.use("compile", hbs(optionsE1R));
+  transporterE1SC.use("compile", hbs(optionsE1SC));
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
@@ -446,6 +529,48 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     },
   };
 
+  const StarcityEmail = {
+    from: "Rimbo info@rimbo.rent",
+    to: testEmail, // Starcity Email
+    subject: "Registro de inquilino correcto",
+    text: "",
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+      {
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
+      },
+    ],
+    template: "E1SCEmailEn",
+    context: {
+      agencyName,
+      tenantsName,
+      tenantsEmail,
+      tenantsPhone,
+      tenantsAddress,
+      tenantsZipCode,
+      documentType,
+      documentNumber,
+      monthlyNetIncome,
+      jobType,
+      documentImageFront,
+      documentImageBack,
+      randomID,
+      rentAmount,
+      acceptanceCriteria,
+      rentStartDate,
+      rentEndDate,
+      tenancyID,
+      building,
+      room,
+    },
+  };
+
   transporterE1R.sendMail(RimboEmail, (err, data) => {
     if (err) {
       console.log("There is an error here...!" + err);
@@ -453,7 +578,14 @@ const sendF1SCFormEmailsEn = async (req, res) => {
       console.log("Email sent!");
     }
   });
-  // * END =======> RJ3 Email  @PM/Agency
+
+  transporterE1SC.sendMail(StarcityEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
   res.status(200).json();
 };

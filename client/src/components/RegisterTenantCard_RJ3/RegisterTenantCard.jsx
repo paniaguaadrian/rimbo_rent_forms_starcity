@@ -113,7 +113,6 @@ const RegisterTenantCard = ({ t }) => {
     ev.preventDefault();
     const tenantsEmail = document.getElementById("email").value;
     const tenantsName = document.getElementById("name").value;
-    console.log(tenantsName);
     const tenantsPhone = document.getElementById("phone").value;
     const timestamps = new Date()
       .toISOString()

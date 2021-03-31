@@ -290,25 +290,6 @@ a{
 	width: 5rem;
 }
 
-.btn-rimbo{
-    background-color: #41c1bd;
-  color: white!important;
-  height: 1.9rem;
-  width: 8rem;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  font-weight: 300;
-  font-size: 0.8rem;
-}
-
-.btn-rimbo a { 
-text-decoration: none;
-	color: white!important;
-}
-
-
-
 /*PROJECT*/
 .text-project{
 	padding-top: 10px;
@@ -369,6 +350,8 @@ text-decoration: none;
           		<tr>
           			<td class="logo" style="text-align: center;">
 			            <img class='logo-image' src="cid:starcitylogo"><a href="https://starcity.com/"></a></img>
+
+						
 			          </td>
           		</tr>
           	</table>
@@ -380,8 +363,8 @@ text-decoration: none;
             	<tr>
             		<td>
             			<div class="text" style="padding: 0 3em; text-align: center;">
-							<h3>Good news {{agencyName}}!</h3>			
-            				
+							<h3>¡Hola equipo de Starcity!</h3>				
+            				<h3>Gracias por rellenar el formulario. <br/>Hemos recibido la información, el residente recibirá en breve un correo para registrar su tarjeta. </h3>
             			</div>
             		</td>
             	</tr>
@@ -394,64 +377,93 @@ text-decoration: none;
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-		              	<h3>The member {{tenantsName}} has registered with Rimbo successfully for the community <b>{{building}}</b>.</h3>
+		              	<h3>Recibirás una notificación cuando el residente se haya registrado correctamente.</h3>
 
 		            	</div>
 		          </tr><!-- end: tr -->
 					<td valign="middle" class="hero hero-2 bg_white" style="padding: 1em 0;">
+				<table>
+					<tr>
+						<td>
+							<div class="text" style="padding: 0em 3em; text-align: left; color: black;">
+								<h3>Residente:</h3>
+								<ul>
+                                    <li>Nombre completo del Residente: {{tenantsName}}</li>
+                                    <li>Correo electrónico del Residente: {{tenantsEmail}}</li>
+                                    <li>Número de teléfono del Residente:  {{tenantsPhone}}</li>
+                                    <li>Dirección actual: {{tenantsAddress}}</li>
+                                    <li>Código Postal Actual: {{tenantsZipCode}}</li>
+                                    <li>Tipo de Documento: {{documentType}}</li>
+                                    <li>Número de Documento: {{documentNumber}}</li>
+                                    <li>Ingreso mensual neto: {{monthlyNetIncome}}</li>
+                                    <li>Situación laboral: {{jobType}}</li>
+                                    <li>Criterio de aceptación: {{acceptanceCriteria}}</li>
+                                </ul>
+                                <h3>Información de la propiedad:</h3>
+                                <ul>
+                                    <li>Alquiler mensual: {{rentAmount}}</li>
+                                    <li>Comunidad: {{building}}</li>
+                                    <li>Piso/Habitación: {{room}}</li>
+                                    <li>Fecha de entrada: {{rentStartDate}}</li>
+                                    <li>Fecha de salida: {{rentEndDate}}</li>
+                                </ul>
+								
+							</div>
+						</td>
+					</tr>
+				</table>
 
-            {{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		          <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: center; padding: 0 30px; color: #6aa3a1;">
-		              	<h2>Solo falta un paso importante:</h2>
-						 
-		              	
-		            	</div>
-		          </tr><!-- end: tr -->
-					
-			</table> --}}
-
-			
-
-
-            <table>
+				<table>
 					<tr>
 						<td>
 							<div class="text" style="padding: 1em 3em; text-align: left;">
 								
-								<h3>Please, feel free to continue with the signature of the rental agreement.</h3>							
+								<h3>Si tienes alguna cuestión, no dudes en contactarnos.</h3>
+								
 							</div>
 						</td>
 					</tr>
-			</table>
+				</table>
 
-			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+				{{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0 30px; color: #6aa3a1;">
-		              	<h2>We are always happy to collaborate with you!</h2>
-						 
+		              	<h2>It sounds great, doesn't it?</h2>
+						  <h4>Well - it’s true and you’re now part of the enso-Rimbo family!</h4>
 		              	
 		            	</div>
 		          </tr><!-- end: tr -->
 					
-			</table>
+			</table> --}}
+					
+			{{!-- <table>
+					<tr>
+						<td>
+							<div class="text" style="padding: 1em 3em; text-align: left;">
+								
+								<h3>Tan pronto como se realice la evaluación, nos pondremos en contacto contigo para completar el proceso de alquiler de esta propiedad.</h3>
 
-            {{!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<h3>Por favor, comprueba tu correo electrónico en las próximas horas.</h3>
+
+								<h3>¡A partir de ahora, gestionar este alquiler será más seguro y rápido que nunca!</h3>
+
+
+								
+							</div>
+						</td>
+					</tr>
+			</table> --}}
+
+			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: center; padding: 0px 30px; color: #6aa3a1;">
-		              	<button class='btn-rimbo' type="button"><a href="http://localhost:3000/register/card/{{randomID}}">¡Empieza tu alquiler!(DEV)</a></button>
-
-						<button class='btn-rimbo' type="button"><a href="https://rimbo-test.ew.r.appspot.com/register/card/{{randomID}}">¡Empieza tu alquiler!(PROD)</a></button>
-
-						<button class='btn-rimbo' type="button"><a href="https://badi.rimbo.rent/register/card/{{randomID}}">¡Empieza tu alquiler!(PROD2)</a></button>
+		              	<h3>¡Saludos cordiales de nuestro equipo!</h3>
 						  
 		          </tr><!-- end: tr -->
 					
-			</table> --}}
-
+			</table>
 			<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
 		          <tr>
 		            <td class="bg_white email-section">
