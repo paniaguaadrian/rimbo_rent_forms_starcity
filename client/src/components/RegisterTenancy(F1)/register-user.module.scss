@@ -214,8 +214,8 @@
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-
   height: 75vh;
+
   @include xl {
     display: flex;
     justify-content: center;
@@ -225,7 +225,7 @@
     margin: 0 auto;
 
     background-color: white;
-    height: 77.7vh;
+    // height: 77.7vh;
   }
 }
 

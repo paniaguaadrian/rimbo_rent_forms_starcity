@@ -233,22 +233,6 @@ const RegisterTenantCard = ({ t }) => {
                     {t("F2TT.titleTwo")}
                     <span>!</span>
                   </h1>
-                  {/* <div className={styles.ExtraInfoContainer}>
-                  <h2>{t("RJ3.subtitle")}</h2>
-                  <div>
-                    {tenancyData.product === "Administración" ? (
-                      <p>
-                        {t("RJ3.warningOne")}
-                        <span> {t("RJ3.warningTwo")}</span>
-                      </p>
-                    ) : (
-                      <p>
-                        {t("RJ3.warningOne")}{" "}
-                        <span>{t("RJ3.warningThree")}</span>
-                      </p>
-                    )}
-                  </div>
-                </div> */}
                 </div>
                 <div className={style.ContainerCard}>
                   <div className={style.Form_header_left}>

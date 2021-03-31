@@ -43,18 +43,16 @@ const {
 const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const [errors, setErrors] = useState({});
   const [isProcessing, setProcessingTo] = useState(false);
-  // const [loading, setLoading] = useState(false);
   const [tenantsAddress, setTenantsAddress] = useState("");
   const [tenantsZipCode, setTenantsZipCode] = useState("");
   const [responseData, setResponseData] = useState([]); // eslint-disable-line
-  const [sent, setSent] = useState(false);
-  const [setErr] = useState(null); // eslint-disable-line
+  // const [sent, setSent] = useState(false); // eslint-disable-line
   const [files, setFiles] = useState({
     DF: null,
     DB: null,
   });
 
-  // ! Google Maps Address and Zip Code
+  // Google Maps Address and Zip Code
   const handleSelect = async (value) => {
     const results = await geocodeByAddress(value);
 
@@ -84,7 +82,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     setTenantsAddress(results[0].formatted_address);
   };
 
-  // ! Handle on change Rest of Data
+  // Handle on change regular Data
   const handleTenant = ({ target }) => {
     setTenancy({
       type: UPDATE_TENANT_PERSONAL_INFO,
@@ -92,7 +90,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     });
   };
 
-  // ! Files
+  // Handle on change Files
   const changeHandler = (event) => {
     const name = event.target.name;
     setFiles((files) => {
@@ -106,8 +104,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
   const randomID = ID;
   const tenancyID = randomID;
 
+  // Function to send => Email, emailData
   const sendAttachments = async (data) => {
-    console.log("Hello im inside sentAttachments");
     if (i18n.language === "en") {
       await axios.post(`${REACT_APP_BASE_URL_EMAIL}/en/e1r`, {
         //  Agency
@@ -165,6 +163,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     }
   };
 
+  // Function to get DB Data
   const getData = async () => {
     return fetch(
       `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY}/${tenancyID}`
@@ -177,7 +176,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
       })
       .then((responseData) => {
         setResponseData(responseData);
-        setSent((prevSent) => !prevSent);
+        // setSent((prevSent) => !prevSent);
         return responseData; // return data from here
       })
       .catch((err) => console.log(err));
@@ -191,7 +190,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
     if (Object.keys(errors).length > 0) return;
     setProcessingTo(true);
 
-    // ! Send data to Rimbo_API without files
+    //  Send regular data to DB
     await axios.post(
       `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY_STARCITY}`,
       {
@@ -220,37 +219,39 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         room: tenancy.propertyDetails.room,
       }
     );
-    // ! Send FILES to Rimbo_API
+
+    // Setting files before post
     const formData = new FormData();
     for (const key in files) {
       formData.append(key, files[key]);
     }
     formData.append("randomID", randomID);
 
-    // ! Post to Rimbo API (files/images)
+    //  Send files to DB
+    // ? Stored in a variable to play with it
     const result = await axios.post(
       `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANT}/${randomID}/starcity/upload`,
       formData,
       { randomID }
     );
 
+    // This function takes getData as data and w8 to sendAttachments only, if there is data fetched.
     const executeResult = async () => {
       const data = await getData();
       if (data) await sendAttachments(data);
     };
 
+    // If the post of the files to DB is succeed, we execute the function below and change step
     if (result) {
       try {
-        setSent(true);
+        // setSent(true);
         await executeResult();
         setStep((prevStep) => prevStep + 1);
       } catch (err) {
         console.log(err);
       }
     }
-    // setStep(step + 1);
   };
-  console.log(sent);
 
   return (
     <>
@@ -504,19 +505,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
           )}
         </div>
       </form>
-      {/* ) : (
-        <div className={styles.CompleteContainer}>
-          <div className={styles.CompleteText}>
-            <h1>{t("RJ2.completedTitle")}</h1>
-            <p>
-              {t("RJ2.completeSubtextOne")}
-
-              {t("RJ2.completeSubtextTwo")}
-            </p>
-            <h3>{t("RJ2.completeRegards")}</h3>
-          </div>
-        </div>
-      )} */}
     </>
   );
 };
