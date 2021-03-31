@@ -1,35 +1,62 @@
 @import "../../styles/variables";
 @import "../../styles/breakpoint";
 
-.Register {
-  padding: 0 3rem;
+.BackgroundImage::before {
+  // content: "";
+  background-image: url(../../images/undraw_buy_house_560d.png);
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  max-width: 100%;
+  height: 100%;
+  @include xl {
+    content: "";
+    background-image: url(../../images/undraw_buy_house_560d.png);
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.HeaderContainer {
+  padding: 0 4rem;
   margin-top: 1rem;
 
   @include xl {
-    font-size: 1rem;
     padding: 0 3rem;
     margin-top: 0rem;
   }
 
-  h1,
-  h4 {
+  h1 {
     text-align: center;
     color: $primary-color;
-  }
-  span {
-    color: black;
-    font-weight: 100;
-  }
 
-  h1 {
     margin: 0 auto;
     font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     width: 100%;
     font-weight: 100;
 
     @include xl {
+      text-align: center;
+      color: $primary-color;
       margin-top: 1rem;
       margin-bottom: 1rem;
       font-size: 2rem;
@@ -37,48 +64,10 @@
       padding: 0 10rem;
     }
   }
-  h2 {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 0 3rem;
-    @include xl {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      font-weight: 300;
-      padding: 0 20rem;
-    }
-  }
-  p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: $danger;
-    text-align: center;
 
-    @include xl {
-      margin: 0 auto;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      font-weight: 300;
-      color: $danger;
-      text-align: center;
-      padding: 0 20rem;
-    }
-  }
-  h4 {
-    padding-bottom: 0;
-    font-size: 2.2rem;
-
-    @include xl {
-      padding-bottom: 0rem;
-      font-size: 1rem;
-    }
-  }
-  h4 span {
-    font-weight: 600;
+  span {
+    color: black;
+    font-weight: 100;
   }
 }
 
@@ -87,60 +76,153 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 60rem;
+  // width: 60rem;
   position: relative;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.861) !important;
+  background-color: none !important;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 40px 55px -7px;
+  box-shadow: none;
+  @include xl {
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60rem;
+    position: relative;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.861) !important;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 40px 55px -7px;
+  }
 }
 
 .Form_header_left {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 25rem;
-  padding: 1rem 1rem;
+
+  margin-bottom: 6rem;
+  padding: 1rem 4rem;
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 25rem;
+    padding: 1rem 1rem;
+  }
   p {
-    font-size: 1.2rem;
-    font-weight: 200;
-    line-height: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.7rem;
     margin-bottom: 2rem;
     text-align: justify;
-    text-justify: inter-word;
+    @include xl {
+      font-size: 1.2rem;
+      font-weight: 100;
+      line-height: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
   }
 
   .important_p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.3rem;
     margin-bottom: 2rem;
     text-align: justify;
     text-justify: inter-word;
+    @include xl {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.4rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+      // text-justify: inter-word;
+    }
   }
 }
 
 .rimbo_sign {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  @include xl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.rimbo_sign h4 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-right: 1rem;
+  @include xl {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 1rem;
+  }
+}
+
+.rimbo_sign img {
+  width: 6.5rem;
+  @include xl {
+    width: 4rem;
+  }
+}
+
+.rimbo_mobile {
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   align-items: baseline;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  @include xl {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
 }
 
-.rimbo_sign h4 {
-  font-size: 0.8rem;
+.rimbo_mobile h4 {
+  font-size: 1.3rem;
   font-weight: 400;
   margin-right: 1rem;
+  @include xl {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 1rem;
+  }
 }
 
-.rimbo_sign img {
-  width: 4rem;
+.rimbo_mobile img {
+  width: 6.5rem;
+  margin-bottom: 3rem;
+  @include xl {
+    width: 4rem;
+  }
 }
 
 .Form_container {
@@ -148,64 +230,194 @@
   margin: 1rem auto;
   flex-direction: column;
   justify-content: center;
-  //   text-align: center;
-  //   align-items: center;
-  border: 1px solid transparent;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-  background-color: white !important;
+  border: none;
+  box-shadow: none;
+  background-color: none;
   opacity: 1 !important;
   border-radius: 4px;
   width: 25rem;
   height: 35rem;
   padding: 1.5rem 2rem;
+  @include xl {
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    background-color: white !important;
+    opacity: 1 !important;
+    border-radius: 4px;
+    width: 25rem;
+    height: 35rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.DataContainer {
+  margin: 0 0;
+  margin-top: 23rem;
+  margin-bottom: 1rem;
+  margin-left: -5rem;
+  height: 25rem;
+  // width: 15rem !important;
+  @include xl {
+    margin: 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: -0;
+    height: auto;
+    // width: 15rem !important;
+  }
 }
 
 .Form_element {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   margin-bottom: 1rem;
+  @include xl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
 }
 
 .Form_element h4 {
-  //   text-decoration: underline;
   color: $primary-color;
+  font-size: 1.8rem;
+  font-weight: 100;
+  @include xl {
+    color: $primary-color;
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
 }
 
-.Form_element p {
-  //   text-decoration: underline;
-  color: grey;
+.Form_element input {
+  color: rgb(80, 80, 80);
+  font-size: 1.5rem;
+  width: 28rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 100;
+  border: none;
+  border-bottom: 1px solid #01d2cb61;
+  background: none !important;
+  @include xl {
+    color: rgb(80, 80, 80);
+    font-size: 0.8rem;
+    width: 12rem;
+    padding: 0.3rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    text-align: right;
+    font-weight: 100;
+    border: none;
+    border-bottom: 1px solid #01d2cb61;
+    background: none !important;
+  }
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .StripeCard {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
   text-align: center;
   align-items: center;
   text-align: center;
   align-self: center;
   justify-content: center;
+  @include xl {
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
 }
 
 .tarjeta {
   margin: 0 auto;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  @include xl {
+    margin: 0 2rem;
+    margin-top: 1rem;
+  }
 }
 
 .StripeCard h3 {
+  font-size: 2rem;
+  text-align: left;
   color: $primary-color;
+  @include xl {
+    color: $primary-color;
+    font-size: 1rem;
+    text-align: left;
+    color: $primary-color;
+  }
 }
 .StripeCard h4 {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   margin-top: 1rem;
-  font-weight: 500;
+  margin-bottom: 1rem;
+  font-weight: 100;
+  padding: 0 4rem;
+  @include xl {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    padding: 0 1rem;
+  }
 }
 .StripeCard p {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   margin-top: 1rem;
   color: $danger;
+  padding: 0 0;
+  @include xl {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: $danger;
+    padding: 0 2rem;
+  }
+}
+
+.ErrorInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  @include xl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    font-weight: 400;
+    color: $danger;
+    font-size: 1.3rem;
+    @include xl {
+      font-weight: 400;
+      color: $danger;
+      font-size: 1rem;
+    }
+  }
 }
 
 .TermsContainerStripe {
@@ -213,9 +425,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding: 0 2rem;
+  padding: 0 0rem;
+
   @include xl {
     display: flex;
     flex-direction: row;
@@ -227,7 +441,7 @@
   }
   p {
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
 
     @include xl {
       font-weight: 300;
@@ -245,8 +459,8 @@
   }
   input {
     margin-right: 1rem;
-    height: 4rem;
-    width: 4rem;
+    height: 6rem;
+    width: 6rem;
     @include xl {
       margin-right: 0.5rem;
       height: 2rem;
@@ -262,41 +476,24 @@
 .security_container {
   margin: 0 auto;
   margin-top: 2rem;
+  // margin-bottom: 20rem;
 }
 
 .stripe_logo {
-  margin: 0 auto;
-  width: 10rem;
+  width: 15rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  @include xl {
+    width: 10rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
 }
 
-// .BackgroundImage {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   text-align: center;
-//   margin: 0 auto;
-//   margin-top: 0rem;
-// }
+// Success page
 
-.BackgroundImage::before {
-  content: "";
-  background-image: url(../../images/undraw_buy_house_560d.png);
-  background-size: cover;
-  background-repeat: no-repeat, repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-  max-width: 100%;
-  height: 100%;
+.success {
+  margin: 0 auto;
 }
 
 .hero_section_container {
@@ -327,9 +524,6 @@
   background-color: rgba(255, 255, 255, 0.738) !important;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 40px 55px -7px;
-}
-.success {
-  margin: 0 auto;
 }
 
 .form_header_left_success {

@@ -1,31 +1,30 @@
 // React Components
 import React, { useState, useEffect, useReducer } from "react";
 import { Helmet } from "react-helmet";
-
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
-import { TenantStripeReducer, DefaultTenant } from "./tenantStripe-reducer";
 
 // Stripe Components
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
-// Reducer-Constants
+// Reduce & Constants
+import { TenantStripeReducer, DefaultTenant } from "./tenantStripe-reducer";
 import { UPDATE_NEWTENANT_INFO } from "./tenantStripe-constants";
 
 // Multi language
 import { withNamespaces } from "react-i18next";
 import i18n from "../../i18n";
 
+// Custom Components
 import NavBar from "../NavBarCentered/NavBar";
 
+// Images
 import RimboLogo from "../../images/rimbo-logo.png";
 import StripeLogo from "../../images/secure-payments.png";
 import StarCityImage from "../../images/starcity-image.png";
 
 // Styles
 import Loader from "react-loader-spinner";
-import styles from "../RegisterTenancy(F1)/register-user.module.scss";
 import style from "./register-card.module.scss";
 import "./CardSection.css";
 const CARD_ELEMENT_OPTIONS = {
@@ -74,6 +73,7 @@ const RegisterTenantCard = ({ t }) => {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null); //eslint-disable-line
 
+  // Fetch data from DB to autocomplete input form
   useEffect(() => {
     const getData = () => {
       fetch(`${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY}/${tenancyID}`)
@@ -111,9 +111,10 @@ const RegisterTenantCard = ({ t }) => {
 
   const handleFormSubmit = async (ev) => {
     ev.preventDefault();
-    const tenantsEmail = document.getElementById("email").innerHTML;
-    const tenantsName = document.getElementById("name").innerHTML;
-    const tenantsPhone = document.getElementById("phone").innerHTML;
+    const tenantsEmail = document.getElementById("email").value;
+    const tenantsName = document.getElementById("name").value;
+    console.log(tenantsName);
+    const tenantsPhone = document.getElementById("phone").value;
     const timestamps = new Date()
       .toISOString()
       .replace(/T/, " ")
@@ -213,9 +214,9 @@ const RegisterTenantCard = ({ t }) => {
       </Helmet>
       <NavBar />
       {!isSuccessfullySubmitted ? (
-        <div className={styles.RegisterContainer}>
+        <div>
           {loading ? (
-            <div className={styles.Register}>
+            <div>
               <Loader
                 type="Puff"
                 color="#01d2cc"
@@ -227,7 +228,7 @@ const RegisterTenantCard = ({ t }) => {
           ) : (
             <>
               <div className={style.BackgroundImage}>
-                <div className={style.Register}>
+                <div className={style.HeaderContainer}>
                   <h1>
                     <span>{t("F2TT.titleOne")}</span>
                     {t("F2TT.titleTwo")}
@@ -247,18 +248,35 @@ const RegisterTenantCard = ({ t }) => {
 
                   <form onSubmit={handleFormSubmit}>
                     <div className={style.Form_container}>
-                      <div className={style.Form_element}>
-                        <h4>{t("F2TT.name")}</h4>
-                        <p id="name">{tenancyData.tenant.tenantsName}</p>
-                      </div>
-                      <div className={style.Form_element}>
-                        <h4>{t("F2TT.email")}</h4>{" "}
-                        <p id="email">{tenancyData.tenant.tenantsEmail}</p>
-                      </div>
+                      <div className={style.DataContainer}>
+                        <div className={style.Form_element}>
+                          <h4>{t("F2TT.name")}</h4>
+                          <input
+                            id="name"
+                            type="text"
+                            value={tenancyData.tenant.tenantsName}
+                            disabled
+                          />
+                        </div>
+                        <div className={style.Form_element}>
+                          <h4>{t("F2TT.email")}</h4>{" "}
+                          <input
+                            id="email"
+                            type="text"
+                            value={tenancyData.tenant.tenantsEmail}
+                            disabled
+                          />
+                        </div>
 
-                      <div className={style.Form_element}>
-                        <h4>{t("F2TT.phone")}</h4>
-                        <p id="phone">{tenancyData.tenant.tenantsPhone}</p>
+                        <div className={style.Form_element}>
+                          <h4>{t("F2TT.phone")}</h4>
+                          <input
+                            id="phone"
+                            type="text"
+                            value={tenancyData.tenant.tenantsPhone}
+                            disabled
+                          />
+                        </div>
                       </div>
 
                       <label className={style.StripeCard}>
@@ -272,7 +290,7 @@ const RegisterTenantCard = ({ t }) => {
                         <p>{t("F2TT.warningcreditcard")}</p>
                       </label>
 
-                      <div className={styles.ErrorInput}>
+                      <div className={style.ErrorInput}>
                         <p className="error-message">{checkoutError}</p>
                       </div>
 
@@ -316,7 +334,7 @@ const RegisterTenantCard = ({ t }) => {
                           >
                             {" "}
                             Política de Cookies
-                          </a>
+                          </a>{" "}
                           de Rimbo Rent.
                         </p>
                       </div>
@@ -341,6 +359,10 @@ const RegisterTenantCard = ({ t }) => {
                           src={StripeLogo}
                           alt="Stripe Security Payment Logo"
                         />
+                      </div>
+                      <div className={style.rimbo_mobile}>
+                        <h4>Powered by</h4>
+                        <img src={RimboLogo} alt="Rimbo Rent Logo" />
                       </div>
                     </div>
                   </form>
