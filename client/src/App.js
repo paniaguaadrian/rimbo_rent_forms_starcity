@@ -14,6 +14,7 @@ import StripeHandler from "./components/RegisterTenantCard_RJ3/StripeHandlerComp
 // Screens
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import ApprovedTenantRimbo from "./screens/approvedTenantRimbo/ApprovedTenantRimbo.jsx";
+import HomePage from "./screens/HomePage/HomePage";
 
 // Normalize & Generic styles
 import "./styles/generic.scss";
@@ -21,6 +22,7 @@ import "./styles/generic.scss";
 const App = () => {
   return (
     <>
+      <Route exact path="/" component={HomePage} />
       <Route exact path="/terms" component={TermsAndConditions} />
       <Route exact path="/register/tenancy" component={RegisterTenancy} />
       <Route

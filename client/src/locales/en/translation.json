@@ -3,6 +3,12 @@
   "prevStepButton": "Previous Step",
   "submitButton": "Send",
   "authorize": "Send data",
+  "Home": {
+    "header": "Starcity & Rimbo - The new way of renting",
+    "title": "Welcome to the union between Starcity and Rimbo",
+    "subtitle": "Enjoy the new way of renting",
+    "text": "Any question please communicate with us"
+  },
   "F1SC": {
     "helmet": "New tenancy - Starcity & Rimbo - The new way of rent",
     "header": {

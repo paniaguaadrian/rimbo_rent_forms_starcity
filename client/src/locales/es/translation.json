@@ -3,6 +3,12 @@
   "prevStepButton": "Atrás",
   "submitButton": "Enviar",
   "authorize": "Enviar datos",
+  "Home": {
+    "header": "Starcity & Rimbo - The new way of renting",
+    "title": "Bienvenid@ a la unión entre Sarcity y Rimbo",
+    "subtitle": "Disfruta de la nueva forma de alquiler",
+    "text": "Cualquier duda que tengas, ponte en contacto con nosotros"
+  },
   "F1SC": {
     "helmet": "Nuevo alquiler - Starcity & Rimbo - The new way of rent",
     "header": {
