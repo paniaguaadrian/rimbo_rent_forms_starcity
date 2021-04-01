@@ -97,6 +97,11 @@
       "subtitle": "We will get in touch with you shortly to complete the process."
     }
   },
+  "approvedRimbo": {
+    "header": "Tenant approved by Rimbo",
+    "title": "Awesome, you just accepted the new tenant",
+    "subtitle": "We will send an email to the tenant to register the debit card with us"
+  },
   "F2TT": {
     "header": "New tenant - Starcity & Rimbo - The new way of rent",
     "titleOne": "Rent this property ",

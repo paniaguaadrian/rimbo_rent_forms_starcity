@@ -94,7 +94,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             <Input
               type="date"
               name="rentStartDate"
-              value={tenancy.propertyDetails.rentStartDate.slice(0, 10)}
+              value={tenancy.propertyDetails.rentStartDate}
               label={t("F1SC.stepZero.rentStartDate")}
               onChange={(e) => handleProperty(e)}
               error={errors.rentStartDate}
@@ -104,7 +104,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             <Input
               type="date"
               name="rentEndDate"
-              value={tenancy.propertyDetails.rentEndDate.slice(0, 10)}
+              value={tenancy.propertyDetails.rentEndDate}
               label={t("F1SC.stepZero.rentEndDate")}
               onChange={(e) => handleProperty(e)}
               error={errors.rentEndDate}

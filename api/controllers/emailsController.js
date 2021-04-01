@@ -356,6 +356,10 @@ const sendF2SCFormEmails = async (req, res) => {
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
       },
+      {
+        filename: "Tenant_Guía_&_Reglas_generales_Starcity_ES.pdf",
+        path: "./views/images/Tenant_Guía_&_Reglas_generales_Starcity_ES.pdf",
+      },
     ],
     template: "E3TTEmail",
     context: {
@@ -772,6 +776,11 @@ const sendF2SCFormEmailsEn = async (req, res) => {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
+      },
+      {
+        filename: "Tenant_General_Rules_&_Guidelines_Starcity_EN.pdf",
+        path:
+          "./views/images/Tenant_General_Rules_&_Guidelines_Starcity_EN.pdf",
       },
     ],
     template: "E3TTEmailEn",

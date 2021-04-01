@@ -83,9 +83,14 @@
       "DB": "DNI/NIE/Pasaporte (Atrás)"
     },
     "completed": {
+      "header": "Tenant approved by Rimbo",
       "title": "Genial, ¡hemos recibido tus detalles!",
       "subtitle": "Nos pondremos en contacto contigo en breve para completar el proceso."
     }
+  },
+  "approvedRimbo": {
+    "title": "Awesome, you just accepted the new tenant",
+    "subtitle": "We will send an email to the tenant to register the debit card with us"
   },
   "F2TT": {
     "header": "Nuevo inquilino - Starcity & Rimbo - The new way of rent",

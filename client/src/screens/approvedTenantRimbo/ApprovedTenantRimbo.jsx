@@ -142,19 +142,19 @@ const ApprovedTenantRimbo = ({ t }) => {
 
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-        <title>{t("success.header")}</title>
+        <title>{t("approvedRimbo.header")}</title>
       </Helmet>
       <NavBar />
       <div className={styles.SuccessPageContainer}>
         <div className={styles.SuccessPageText}>
-          <h1>{t("success.tenantTitle")}</h1>
-          <h2>{t("success.tenantSubtitle")}</h2>
-          <p>
+          <h1>{t("approvedRimbo.title")}</h1>
+          <h2>{t("approvedRimbo.subtitle")}</h2>
+          {/* <p>
             {t("success.tenantPOne")}
             <b>{responseData.tenantsName}</b>
             {t("success.tenantPTwo")}
           </p>
-          <p>{t("success.tenantPThree")}</p>
+          <p>{t("success.tenantPThree")}</p> */}
         </div>
       </div>
       <Footer />
