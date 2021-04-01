@@ -28,8 +28,6 @@ export const DefaultTenancy = {
   tenantPersonalDetails: {
     documentType: "",
     documentNumber: "",
-    // documentImageFront: "",
-    // documentImageBack: "",
     monthlyNetIncome: "",
     jobType: "",
     isAgentAccepted: true,

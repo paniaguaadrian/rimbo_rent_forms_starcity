@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 
 // Styles
 import styles from "./register-user.module.scss";
-import selectStyles from "../InputSelect/input.select.module.scss";
+import selectStyles from "../../components/InputSelect/input.select.module.scss";
 
 // Validation
 import { isMoreTenant } from "./validation";
@@ -16,10 +16,10 @@ import { UPDATE_TENANT_PERSONAL_INFO } from "./constants";
 
 // Custom Comoponents
 import Loader from "react-loader-spinner";
-import InputCheck from "../InputCheck";
-import Input from "../Input";
-import InputFile from "../InputFile";
-import Button from "../Button";
+import InputCheck from "../../components/InputCheck";
+import Input from "../../components/Input";
+import InputFile from "../../components/InputFile";
+import Button from "../../components/Button";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 // Multilanguage

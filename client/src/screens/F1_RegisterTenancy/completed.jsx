@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Custom Components
-import Success from "../Success/Success";
+import Success from "../../components/Success/Success";
 
 // Multi language
 import { withNamespaces } from "react-i18next";

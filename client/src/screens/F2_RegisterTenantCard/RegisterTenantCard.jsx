@@ -15,8 +15,8 @@ import { withNamespaces } from "react-i18next";
 import i18n from "../../i18n";
 
 // Custom Components
-import NavBar from "../NavBarCentered/NavBar";
-import CustomHelmet from "../Helmet/CustomHelmet";
+import NavBar from "../../components/NavBarCentered/NavBar";
+import CustomHelmet from "../../components/Helmet/CustomHelmet";
 
 // Images
 import RimboLogo from "../../images/rimbo-logo.png";

@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // Custom Components
-import Input from "../Input";
-import Button from "../Button";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 // Validation
 import { isProperty } from "./validation";

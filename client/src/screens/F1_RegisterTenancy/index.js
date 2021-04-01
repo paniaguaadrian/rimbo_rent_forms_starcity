@@ -3,9 +3,9 @@ import React, { useReducer, useState } from "react";
 
 // Custom Components
 import FormSteps from "./form-steps";
-import Footer from "../Footer/Footer";
-import CustomHelmet from "../Helmet/CustomHelmet";
-import NavBar from "../NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
+import CustomHelmet from "../../components/Helmet/CustomHelmet";
+import NavBar from "../../components/NavBar/NavBar";
 
 // Reducer import
 import { TenancyReducer, DefaultTenancy } from "./tenancy-reducer";

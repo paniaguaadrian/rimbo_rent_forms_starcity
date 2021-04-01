@@ -12,9 +12,6 @@ import Footer from "../../components/Footer/Footer";
 // Reducer
 import { TenantReducer, DefaultTenant } from "./approved_tenant_rimbo-reducer";
 
-// Styles
-// import styles from "./approved-user.module.scss";
-
 // Multi language
 import { withNamespaces } from "react-i18next";
 import i18n from "../../i18n";

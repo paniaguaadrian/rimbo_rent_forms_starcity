@@ -7,14 +7,14 @@ import { withNamespaces } from "react-i18next";
 // Custom Components
 import WhatsappBubble from "./components/WhatsappBubble/WhatsappBubble";
 
-// Forms
-import RegisterTenancy from "./components/RegisterTenancy(F1)";
-import StripeHandler from "./components/RegisterTenantCard_RJ3/StripeHandlerComponent";
-
-// Screens
+// General Screens
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import ApprovedTenantRimbo from "./screens/approvedTenantRimbo/ApprovedTenantRimbo.jsx";
 import HomePage from "./screens/HomePage/HomePage";
+
+// Form Screens
+import RegisterTenancy from "./screens/F1_RegisterTenancy";
+import StripeHandler from "./screens/F2_RegisterTenantCard/StripeHandlerComponent";
 
 // Normalize & Generic styles
 import "./styles/generic.scss";

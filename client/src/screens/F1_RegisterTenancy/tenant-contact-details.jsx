@@ -1,10 +1,21 @@
+// React Components
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+
+// Custom Components
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+
+// Multilanguage
 import { withNamespaces } from "react-i18next";
-import Input from "../Input";
-import Button from "../Button";
+
+// Validation
 import { isTenant } from "./validation";
+
+// Reducer
 import { UPDATE_TENANT_CONTACT_INFO } from "./constants";
+
+// Styles
 import styles from "./register-user.module.scss";
 
 const TenantDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
