@@ -187,7 +187,6 @@ const sendE1REmailEmails = async (req, res) => {
     rentEndDate,
   } = req.body;
 
-  // * START =======> RJ3 Email  @PM/Agency
   const transporterE2TT = nodemailer.createTransport(
     sgTransport({
       auth: {
@@ -245,7 +244,73 @@ const sendE1REmailEmails = async (req, res) => {
       console.log("Email sent!");
     }
   });
-  // * END =======> RJ3 Email  @PM/Agency
+
+  res.status(200).json();
+};
+
+// ! F2SC Form => E2R (email to Rimbo that informs tenant is on F2SC)
+const sendNotificationRimbo = async (req, res) => {
+  const {
+    tenantsName,
+    tenantsEmail,
+    tenantsPhone,
+    agencyName,
+    randomID,
+  } = req.body;
+
+  const transporterE2R = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  let optionsE2R = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E2REmail",
+    },
+    viewPath: "views/",
+  };
+
+  transporterE2R.use("compile", hbs(optionsE2R));
+
+  const RimboEmail = {
+    from: "Rimbo info@rimbo.rent",
+    to: testEmail, // Rimbo Email
+    subject: `${agencyName}-${tenantsName}-Registration Start`,
+    text: "",
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+      {
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
+      },
+    ],
+    template: "E2REmail",
+    context: {
+      tenantsName,
+      tenantsEmail,
+      tenantsPhone,
+      agencyName,
+      randomID,
+    },
+  };
+
+  transporterE2R.sendMail(RimboEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
   res.status(200).json();
 };
@@ -608,7 +673,6 @@ const sendE1REmailEmailsEn = async (req, res) => {
     rentEndDate,
   } = req.body;
 
-  // * START =======> RJ3 Email  @PM/Agency
   const transporterE2TT = nodemailer.createTransport(
     sgTransport({
       auth: {
@@ -666,7 +730,73 @@ const sendE1REmailEmailsEn = async (req, res) => {
       console.log("Email sent!");
     }
   });
-  // * END =======> RJ3 Email  @PM/Agency
+
+  res.status(200).json();
+};
+
+// ! F2SC Form => E2R (email to Rimbo that informs tenant is on F2SC)
+const sendNotificationRimboEn = async (req, res) => {
+  const {
+    tenantsName,
+    tenantsEmail,
+    tenantsPhone,
+    agencyName,
+    randomID,
+  } = req.body;
+
+  const transporterE2R = nodemailer.createTransport(
+    sgTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API,
+      },
+    })
+  );
+
+  let optionsE2R = {
+    viewEngine: {
+      extname: ".handlebars",
+      layoutsDir: "views/",
+      defaultLayout: "E2REmailEn",
+    },
+    viewPath: "views/",
+  };
+
+  transporterE2R.use("compile", hbs(optionsE2R));
+
+  const RimboEmail = {
+    from: "Rimbo info@rimbo.rent",
+    to: testEmail, // Rimbo Email
+    subject: `${agencyName}-${tenantsName}-Registration Start`,
+    text: "",
+    attachments: [
+      {
+        filename: "rimbo-logo.png",
+        path: "./views/images/rimbo-logo.png",
+        cid: "rimbologo",
+      },
+      {
+        filename: "starcity-logo.png",
+        path: "./views/images/starcity-logo.png",
+        cid: "starcitylogo",
+      },
+    ],
+    template: "E2REmailEn",
+    context: {
+      tenantsName,
+      tenantsEmail,
+      tenantsPhone,
+      agencyName,
+      randomID,
+    },
+  };
+
+  transporterE2R.sendMail(RimboEmail, (err, data) => {
+    if (err) {
+      console.log("There is an error here...!" + err);
+    } else {
+      console.log("Email sent!");
+    }
+  });
 
   res.status(200).json();
 };
@@ -853,8 +983,10 @@ const sendF2SCFormEmailsEn = async (req, res) => {
 export {
   sendF1SCFormEmails,
   sendE1REmailEmails,
+  sendNotificationRimbo,
   sendF2SCFormEmails,
   sendF1SCFormEmailsEn,
   sendE1REmailEmailsEn,
+  sendNotificationRimboEn,
   sendF2SCFormEmailsEn,
 };

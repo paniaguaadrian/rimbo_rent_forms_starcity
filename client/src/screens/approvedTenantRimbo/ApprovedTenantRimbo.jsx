@@ -97,37 +97,6 @@ const ApprovedTenantRimbo = ({ t }) => {
     processDecision();
   }, [randomID, tenant.isRimboAccepted, tenancyID]);
 
-  const [responseData, setResponseData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [err, setErr] = useState(null);
-
-  useEffect(
-    () => {
-      const getData = () => {
-        fetch(`${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANT}/${randomID}`)
-          .then((res) => {
-            if (res.status >= 400) {
-              throw new Error("Server responds with error!" + res.status);
-            }
-            return res.json();
-          })
-          .then(
-            (responseData) => {
-              setResponseData(responseData);
-              setLoading(true);
-            },
-            (err) => {
-              setErr(err);
-              setLoading(true);
-            }
-          );
-      };
-      getData();
-    },
-    [randomID],
-    [responseData, loading, err]
-  );
-
   return (
     <>
       <Helmet>
@@ -139,9 +108,7 @@ const ApprovedTenantRimbo = ({ t }) => {
           content="La plataforma de alquiler sin depósitos. Descubre una nueva forma de alquilar. Rimbo ahorra al inquilino meses de depósito a la vez que brinda más protección al propietario."
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
         <title>{t("approvedRimbo.header")}</title>
       </Helmet>
       <NavBar />
@@ -149,12 +116,6 @@ const ApprovedTenantRimbo = ({ t }) => {
         <div className={styles.SuccessPageText}>
           <h1>{t("approvedRimbo.title")}</h1>
           <h2>{t("approvedRimbo.subtitle")}</h2>
-          {/* <p>
-            {t("success.tenantPOne")}
-            <b>{responseData.tenantsName}</b>
-            {t("success.tenantPTwo")}
-          </p>
-          <p>{t("success.tenantPThree")}</p> */}
         </div>
       </div>
       <Footer />

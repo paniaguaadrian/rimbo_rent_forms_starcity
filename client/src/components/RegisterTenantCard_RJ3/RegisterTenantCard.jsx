@@ -53,6 +53,7 @@ const {
   REACT_APP_BASE_URL_EMAIL,
   REACT_APP_BASE_URL_STRIPE,
   REACT_APP_API_RIMBO_TENANT_STRIPE,
+  REACT_APP_API_RIMBO_TENANT,
 } = process.env;
 
 const RegisterTenantCard = ({ t }) => {
@@ -73,7 +74,9 @@ const RegisterTenantCard = ({ t }) => {
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState(null); //eslint-disable-line
 
-  // Fetch data from DB to autocomplete input form
+  const [state, setState] = useState(null); // eslint-disable-line
+
+  // ! Fetch data from DB to autocomplete input form
   useEffect(() => {
     const getData = () => {
       fetch(`${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY}/${tenancyID}`)
@@ -96,6 +99,58 @@ const RegisterTenantCard = ({ t }) => {
     };
     getData();
   }, [tenancyID]);
+
+  // ! Fetch data to send email notification to Gloria when tenant enters to that page (one time)
+  useEffect(() => {
+    // fetch data from DB
+    const fetchUserData = () =>
+      axios.get(
+        `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANCY}/${tenancyID}`
+      );
+
+    const postDecision = (body) =>
+      axios.post(
+        `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANT}/${randomID}/payment/try`,
+        body
+      );
+
+    const processDecision = async () => {
+      const { data: tenancyData } = await fetchUserData();
+
+      const postBody = {
+        // use some logic based on tenancyData here to make the postBody
+        isTrying: tenant.isTrying,
+        randomID: tenancyData.tenant.randomID,
+      };
+
+      const { data: decisionResult } = await postDecision(postBody);
+
+      const { tenantsName, tenantsEmail, tenantsPhone } = tenancyData.tenant;
+      const { agencyName } = tenancyData.agent;
+
+      if (tenancyData.tenant.isTrying === false) {
+        if (i18n.language === "en") {
+          axios.post(`${REACT_APP_BASE_URL_EMAIL}/en/e2r`, {
+            tenantsName,
+            tenantsEmail,
+            tenantsPhone,
+            randomID,
+            agencyName,
+          });
+        } else {
+          axios.post(`${REACT_APP_BASE_URL_EMAIL}/e2r`, {
+            tenantsName,
+            tenantsEmail,
+            tenantsPhone,
+            randomID,
+            agencyName,
+          });
+        }
+      }
+      setState(decisionResult);
+    };
+    processDecision();
+  }, [randomID, tenant.isTrying, tenancyID]);
 
   // Handle on change
   const handleNewTenant = ({ target }) => {
