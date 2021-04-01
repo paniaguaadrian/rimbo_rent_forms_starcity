@@ -207,6 +207,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         documentNumber: tenancy.tenantPersonalDetails.documentNumber,
         monthlyNetIncome: tenancy.tenantPersonalDetails.monthlyNetIncome,
         jobType: tenancy.tenantPersonalDetails.jobType,
+        propertyManagerName: tenancy.agencyName,
         randomID: randomID,
         //  Tenancy
         rentAmount: tenancy.propertyDetails.rentAmount,

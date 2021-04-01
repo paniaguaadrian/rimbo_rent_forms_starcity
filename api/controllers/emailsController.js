@@ -196,7 +196,7 @@ const sendE1REmailEmails = async (req, res) => {
     })
   );
 
-  let optionsE1R = {
+  let optionsE2TT = {
     viewEngine: {
       extname: ".handlebars",
       layoutsDir: "views/",
