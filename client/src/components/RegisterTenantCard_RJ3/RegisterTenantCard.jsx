@@ -252,7 +252,7 @@ const RegisterTenantCard = ({ t }) => {
 
   return (
     <>
-      <CustomHelmet title={t("F2TT.header")} />
+      <CustomHelmet header={t("F2TT.header")} />
       <NavBar />
       {!isSuccessfullySubmitted ? (
         <div>

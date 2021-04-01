@@ -13,7 +13,7 @@ import StarcityImage from "../../images/starcity-image.png";
 const Home = ({ t }) => {
   return (
     <>
-      <CustomHelmet title={t("Home.header")} />
+      <CustomHelmet header={t("Home.header")} />
       <div className={styles.SuccessPageContainer}>
         <div className={styles.SuccessPageText}>
           <h1>{t("Home.title")}</h1>

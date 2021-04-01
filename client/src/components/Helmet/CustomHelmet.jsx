@@ -14,7 +14,7 @@ const CustomHelmet = (props) => {
 
       <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-      <title>{props.title}</title>
+      <title>{props.header}</title>
     </Helmet>
   );
 };

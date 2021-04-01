@@ -6,13 +6,14 @@ import { useParams } from "react-router-dom";
 // Custom Components
 import NavBar from "../../components/NavBar/NavBar";
 import CustomHelmet from "../../components/Helmet/CustomHelmet";
+import Success from "../../components/Success/Success";
 import Footer from "../../components/Footer/Footer";
 
 // Reducer
 import { TenantReducer, DefaultTenant } from "./approved_tenant_rimbo-reducer";
 
 // Styles
-import styles from "./approved-user.module.scss";
+// import styles from "./approved-user.module.scss";
 
 // Multi language
 import { withNamespaces } from "react-i18next";
@@ -103,14 +104,12 @@ const ApprovedTenantRimbo = ({ t }) => {
 
   return (
     <>
-      <CustomHelmet title={t("approvedRimbo.header")} />
+      <CustomHelmet header={t("approvedRimbo.header")} />
       <NavBar />
-      <div className={styles.SuccessPageContainer}>
-        <div className={styles.SuccessPageText}>
-          <h1>{t("approvedRimbo.title")}</h1>
-          <h2>{t("approvedRimbo.subtitle")}</h2>
-        </div>
-      </div>
+      <Success
+        title={t("approvedRimbo.title")}
+        subtitle={t("approvedRimbo.subtitle")}
+      />
       <Footer />
     </>
   );

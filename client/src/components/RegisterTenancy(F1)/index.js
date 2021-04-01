@@ -26,7 +26,7 @@ const RegisterTenancy = ({ t }) => {
 
   return (
     <>
-      <CustomHelmet title={t("F1SC.helmet")} />
+      <CustomHelmet header={t("F1SC.helmet")} />
       <NavBar />
       <div className={styles.RegisterContainer}>
         {step === 0 || step === 1 || step === 2 ? (
