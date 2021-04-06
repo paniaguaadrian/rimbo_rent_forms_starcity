@@ -133,8 +133,9 @@
     "textTwo": "We will get in touch with you shortly to complete the process."
   },
   "404Page": {
-    "title": "404 - The page you were looking for doesn't exist",
-    "subtitle": "Go back to the form to proceed with your registration",
-    "paragraph": "If you have any problems get in touch with our support team at info@rimbo.rent"
+    "header": "404 error page - Starcity & Rimbo",
+    "title": "Error 404 - The page you are looking for doesn't exist 😔",
+    "subtitle": "Please, reload the latest link you have received, or get in touch with us:",
+    "paragraph": "Email: info@rimbo.rent or WhatsApp: +34 623 063 769"
   }
 }

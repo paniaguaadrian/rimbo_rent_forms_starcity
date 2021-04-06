@@ -123,8 +123,9 @@
     "textTwo": " Nos pondremos en contacto contigo en breve para completar el proceso."
   },
   "404Page": {
-    "title": "404 - La página a la que intentas acceder no existe",
-    "subtitle": "Vuelve al formulario para seguir con el registro",
-    "paragraph": "Si tienes algun problema ponte en contacto con nuestro equipo de soporte en info@rimbo.rent"
+    "header": "404 error page - Starcity & Rimbo",
+    "title": "404 - La página a la que intentas acceder no existe 😔",
+    "subtitle": "Por favor vuelve a cargar el último enlace que has recibido o ponte en contacto con nosotros a:",
+    "paragraph": "Correo: info@rimbo.rent o WhatsApp: +34 623 063 769"
   }
 }

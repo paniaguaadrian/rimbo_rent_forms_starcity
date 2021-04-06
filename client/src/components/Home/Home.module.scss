@@ -1,7 +1,7 @@
 @import "../../styles/_variables";
 @import "../../styles/breakpoint";
 
-.SuccessPageContainer {
+.HomePageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
   }
 }
 
-.SuccessPageText {
+.HomePageText {
   margin: 0 auto;
   color: black;
   padding: 0 2rem;
@@ -61,9 +61,6 @@
     margin-bottom: 2rem;
     font-weight: 400;
   }
-}
-
-.SuccessPageImage {
   img {
     width: 30rem;
   }

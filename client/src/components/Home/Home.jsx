@@ -1,31 +1,19 @@
-// Custom Components
-import CustomHelmet from "../Helmet/CustomHelmet";
-
-// Multi language
-import { withNamespaces } from "react-i18next";
-
 // Styles
 import styles from "./Home.module.scss";
 
-// Images
-import StarcityImage from "../../images/starcity-image.png";
-
-const Home = ({ t }) => {
+const Home = (props) => {
   return (
     <>
-      <CustomHelmet header={t("Home.header")} />
-      <div className={styles.SuccessPageContainer}>
-        <div className={styles.SuccessPageText}>
-          <h1>{t("Home.title")}</h1>
-          <h2>{t("Home.subtitle")}</h2>
-          <p>{t("Home.text")}</p>
-        </div>
-        <div className={styles.SuccessPageImage}>
-          <img src={StarcityImage} alt="Starcity" />
+      <div className={styles.HomePageContainer}>
+        <div className={styles.HomePageText}>
+          <h1>{props.title}</h1>
+          <h2>{props.subtitle}</h2>
+          <p>{props.text}</p>
+          <img src={props.imageSRC} alt={props.imageAlt} />
         </div>
       </div>
     </>
   );
 };
 
-export default withNamespaces()(Home);
+export default Home;
