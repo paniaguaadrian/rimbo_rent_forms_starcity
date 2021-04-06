@@ -77,11 +77,6 @@ const sendF1SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -118,11 +113,6 @@ const sendF1SCFormEmails = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -213,11 +203,6 @@ const sendE1REmailEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -283,11 +268,6 @@ const sendNotificationRimbo = async (req, res) => {
     subject: `${agencyName}-${tenantsName}-Registration Start`,
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -384,11 +364,6 @@ const sendF2SCFormEmails = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -411,11 +386,6 @@ const sendF2SCFormEmails = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -443,11 +413,6 @@ const sendF2SCFormEmails = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -563,11 +528,6 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -604,11 +564,6 @@ const sendF1SCFormEmailsEn = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -699,11 +654,6 @@ const sendE1REmailEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -769,11 +719,6 @@ const sendNotificationRimboEn = async (req, res) => {
     subject: `${agencyName}-${tenantsName}-Registration Start`,
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -870,11 +815,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     text: "",
     attachments: [
       {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
-      {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
         cid: "starcitylogo",
@@ -897,11 +837,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
@@ -930,11 +865,6 @@ const sendF2SCFormEmailsEn = async (req, res) => {
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
-      {
-        filename: "rimbo-logo.png",
-        path: "./views/images/rimbo-logo.png",
-        cid: "rimbologo",
-      },
       {
         filename: "starcity-logo.png",
         path: "./views/images/starcity-logo.png",
