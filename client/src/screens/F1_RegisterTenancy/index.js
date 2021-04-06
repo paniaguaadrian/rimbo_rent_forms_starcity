@@ -6,6 +6,7 @@ import FormSteps from "./form-steps";
 import Footer from "../../components/Footer/Footer";
 import CustomHelmet from "../../components/Helmet/CustomHelmet";
 import NavBar from "../../components/NavBar/NavBar";
+import WhatsappBubble from "../../components/WhatsappBubble/WhatsappBubble";
 
 // Reducer import
 import { TenancyReducer, DefaultTenancy } from "./tenancy-reducer";
@@ -28,6 +29,7 @@ const RegisterTenancy = ({ t }) => {
     <>
       <CustomHelmet header={t("F1SC.helmet")} />
       <NavBar />
+      <WhatsappBubble />
       <div className={styles.RegisterContainer}>
         {step === 0 || step === 1 || step === 2 ? (
           <div className={styles.Register}>

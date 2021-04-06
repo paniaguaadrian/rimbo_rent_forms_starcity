@@ -17,6 +17,7 @@ import i18n from "../../i18n";
 // Custom Components
 import NavBar from "../../components/NavBarCentered/NavBar";
 import CustomHelmet from "../../components/Helmet/CustomHelmet";
+import WhatsappBubble from "../../components/WhatsappBubble/WhatsappBubble";
 
 // Images
 import RimboLogo from "../../images/rimbo-logo.png";
@@ -254,6 +255,7 @@ const RegisterTenantCard = ({ t }) => {
     <>
       <CustomHelmet header={t("F2TT.header")} />
       <NavBar />
+      <WhatsappBubble />
       {!isSuccessfullySubmitted ? (
         <div>
           {loading ? (

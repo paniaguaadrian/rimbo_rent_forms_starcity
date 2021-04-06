@@ -5,6 +5,10 @@ import React from "react";
 import styles from "./success.module.scss";
 
 const Success = (props) => {
+  const imageStyle = {
+    width: "25rem",
+    margin: "0 auto",
+  };
   return (
     <div className={styles.SuccessPageContainer}>
       <div className={styles.SuccessPageText}>
@@ -12,6 +16,7 @@ const Success = (props) => {
         <h1>{props.title}</h1>
         <h2>{props.subtitle}</h2>
         <p>{props.paragraph}</p>
+        <img src={props.image} style={imageStyle} alt="" />
       </div>
     </div>
   );

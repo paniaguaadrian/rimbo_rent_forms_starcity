@@ -121,5 +121,10 @@
     "title": "¡Ya eres parte de Starcity!",
     "textOne": "Genial, ¡hemos recibido tus detalles!",
     "textTwo": " Nos pondremos en contacto contigo en breve para completar el proceso."
+  },
+  "404Page": {
+    "title": "404 - La página a la que intentas acceder no existe",
+    "subtitle": "Vuelve al formulario para seguir con el registro",
+    "paragraph": "Si tienes algun problema ponte en contacto con nuestro equipo de soporte en info@rimbo.rent"
   }
 }
