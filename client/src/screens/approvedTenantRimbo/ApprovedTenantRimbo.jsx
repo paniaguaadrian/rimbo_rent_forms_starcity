@@ -14,7 +14,7 @@ import { TenantReducer, DefaultTenant } from "./approved_tenant_rimbo-reducer";
 
 // Multi language
 import { withNamespaces } from "react-i18next";
-import i18n from "../../i18n";
+// import i18n from "../../i18n";
 
 // End-Points env
 const {
@@ -66,32 +66,46 @@ const ApprovedTenantRimbo = ({ t }) => {
       const { tenancyID, rentStartDate, rentEndDate } = tenancyData;
 
       if (tenancyData.tenant.isRimboAccepted === false) {
-        if (i18n.language === "en") {
-          axios.post(`${REACT_APP_BASE_URL_EMAIL}/en/e2tt`, {
-            tenantsName,
-            tenantsEmail,
-            randomID,
-            agencyName,
-            building,
-            room,
-            tenancyID,
-            rentStartDate,
-            rentEndDate,
-          });
-        } else {
-          axios.post(`${REACT_APP_BASE_URL_EMAIL}/e2tt`, {
-            tenantsName,
-            tenantsEmail,
-            randomID,
-            agencyName,
-            building,
-            room,
-            tenancyID,
-            rentStartDate,
-            rentEndDate,
-          });
-        }
+        axios.post(`${REACT_APP_BASE_URL_EMAIL}/e2tt`, {
+          tenantsName,
+          tenantsEmail,
+          randomID,
+          agencyName,
+          building,
+          room,
+          tenancyID,
+          rentStartDate,
+          rentEndDate,
+        });
       }
+
+      // if (tenancyData.tenant.isRimboAccepted === false) {
+      //   if (i18n.language === "en") {
+      //     axios.post(`${REACT_APP_BASE_URL_EMAIL}/en/e2tt`, {
+      //       tenantsName,
+      //       tenantsEmail,
+      //       randomID,
+      //       agencyName,
+      //       building,
+      //       room,
+      //       tenancyID,
+      //       rentStartDate,
+      //       rentEndDate,
+      //     });
+      //   } else {
+      //     axios.post(`${REACT_APP_BASE_URL_EMAIL}/e2tt`, {
+      //       tenantsName,
+      //       tenantsEmail,
+      //       randomID,
+      //       agencyName,
+      //       building,
+      //       room,
+      //       tenancyID,
+      //       rentStartDate,
+      //       rentEndDate,
+      //     });
+      //   }
+      // }
 
       setState(decisionResult);
     };
