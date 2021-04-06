@@ -4,8 +4,12 @@ import hbs from "nodemailer-express-handlebars";
 
 // * Rimbo rent emails
 // Production / Development
-// const rimboEmail = "info@rimbo.rent";
-const testEmail = "paniaguasanchezadrian@gmail.com";
+const rimboEmail = "info@rimbo.rent";
+const starcityEmail = "spain@starcity.com";
+// const rimboEmail = "victor@rimbo.rent";
+// const starcityEmail = "victor@rimbo.rent";
+// const testEmail = "paniaguasanchezadrian@gmail.com";
+// const testEmail = "victor@rimbo.rent";
 
 // ? =======>  SPANISH VERSION START ==============================>
 // ! F1SC Form => E1R (email to Rimbo) E1SC (email to Starcity)
@@ -72,7 +76,7 @@ const sendF1SCFormEmails = async (req, res) => {
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -109,7 +113,7 @@ const sendF1SCFormEmails = async (req, res) => {
 
   const StarcityEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Starcity Email
+    to: starcityEmail, // Starcity Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -198,7 +202,7 @@ const sendE1REmailEmails = async (req, res) => {
 
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: tenantsEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -264,7 +268,7 @@ const sendNotificationRimbo = async (req, res) => {
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: `${agencyName}-${tenantsName}-Registration Start`,
     text: "",
     attachments: [
@@ -359,7 +363,7 @@ const sendF2SCFormEmails = async (req, res) => {
   // Rimbo Email
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -382,7 +386,7 @@ const sendF2SCFormEmails = async (req, res) => {
   // Tenant Email
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Tenant Email
+    to: tenantsEmail, // Tenant Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -409,7 +413,7 @@ const sendF2SCFormEmails = async (req, res) => {
   // Starcity Email
   const SCEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // StarCity Email
+    to: starcityEmail, // StarCity Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -523,7 +527,7 @@ const sendF1SCFormEmailsEn = async (req, res) => {
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -560,7 +564,7 @@ const sendF1SCFormEmailsEn = async (req, res) => {
 
   const StarcityEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Starcity Email
+    to: starcityEmail, // Starcity Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -649,7 +653,7 @@ const sendE1REmailEmailsEn = async (req, res) => {
 
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: tenantsEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -715,7 +719,7 @@ const sendNotificationRimboEn = async (req, res) => {
 
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: `${agencyName}-${tenantsName}-Registration Start`,
     text: "",
     attachments: [
@@ -810,7 +814,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   // Rimbo Email
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Rimbo Email
+    to: rimboEmail, // Rimbo Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -833,7 +837,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   // Tenant Email
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // Tenant Email
+    to: tenantsEmail, // Tenant Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [
@@ -861,7 +865,7 @@ const sendF2SCFormEmailsEn = async (req, res) => {
   // Starcity Email
   const SCEmail = {
     from: "Rimbo info@rimbo.rent",
-    to: testEmail, // StarCity Email
+    to: starcityEmail, // StarCity Email
     subject: "Registro de inquilino correcto",
     text: "",
     attachments: [

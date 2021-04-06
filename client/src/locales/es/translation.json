@@ -5,16 +5,16 @@
   "authorize": "Enviar datos",
   "Home": {
     "header": "Starcity & Rimbo - The new way of renting",
-    "title": "Bienvenid@ a la unión entre Sarcity y Rimbo",
+    "title": "Bienvenid@ a la unión entre Starcity y Rimbo",
     "subtitle": "Disfruta de la nueva forma de alquiler",
     "text": "Cualquier duda que tengas, ponte en contacto con nosotros"
   },
   "F1SC": {
     "helmet": "Nuevo alquiler - Starcity & Rimbo - The new way of rent",
     "header": {
-      "title": "Registra a tu inquilino",
+      "title": "Registra a tu residente",
       "subtitleOne": "Completa los campos.",
-      "subtitleTwo": "El inquilino recibirá un email para registrar su tarjeta de débito",
+      "subtitleTwo": "El residente recibirá un email para registrar su tarjeta de débito",
       "subtitleThree": "Recibirás una respuesta por correo electrónico."
     },
     "stepZero": {
@@ -74,7 +74,7 @@
       "jobTypeSix": "Soy estudiante",
       "jobTypeSeven": "Otro",
       "tenantsAddress": "Dirección actual",
-      "tenantsAddressPL": "Escribe la dirección actual del inquilino",
+      "tenantsAddressPL": "Escribe la dirección actual del residente",
       "tenantsZipCode": "Código postal actual",
       "tenantsZipCodePL": "XXXXX",
       "documentType": "Tipo de documento",
@@ -99,7 +99,7 @@
     "subtitle": "We will send an email to the tenant to register the debit card with us"
   },
   "F2TT": {
-    "header": "Nuevo inquilino - Starcity & Rimbo - The new way of rent",
+    "header": "Nuevo residente - Starcity & Rimbo - The new way of rent",
     "titleOne": "¡Alquila este apartamento ",
     "titleTwo": "sin pagar fianza",
     "leftTextOne": "Estamos muy ilusionados de que hayas decidido formar parte de Starcity y somos conscientes de que para ti es muy importante mudarte de una manera fácil, ágil y asequible.",

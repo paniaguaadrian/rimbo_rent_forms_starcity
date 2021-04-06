@@ -12,9 +12,9 @@
   "F1SC": {
     "helmet": "New tenancy - Starcity & Rimbo - The new way of rent",
     "header": {
-      "title": "List your tenant",
+      "title": "List your member",
       "subtitleOne": "Fill out the fields.",
-      "subtitleTwo": "The tenant will receive an email to register the debit card",
+      "subtitleTwo": "The member will receive an email to register the debit card",
       "subtitleThree": "Receive a response via email."
     },
     "stepZero": {
