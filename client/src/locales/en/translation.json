@@ -136,6 +136,7 @@
     "header": "404 error page - Starcity & Rimbo",
     "title": "Error 404 - The page you are looking for doesn't exist 😔",
     "subtitle": "Please, reload the latest link you have received, or get in touch with us:",
-    "paragraph": "Email: info@rimbo.rent or WhatsApp: +34 623 063 769"
+    "paragraphEmail": "info@rimbo.rent",
+    "paragraphPhone": "+34 623 063 769"
   }
 }
