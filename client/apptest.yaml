@@ -1,6 +1,6 @@
 #[START runtime]
 runtime: nodejs12
-service: default
+service: starcityfrontend
 #[END runtime]
 
 #[START handlers]
@@ -36,14 +36,14 @@ handlers:
 
 # [START variables]
 env_variables:
-  REACT_APP_BASE_URL: https://rimbo-api-dot-rimbo-test.ew.r.appspot.com/api
+  REACT_APP_BASE_URL: https://rimbo-api-test-dot-rimbo-partners.oa.r.appspot.com/api
   REACT_APP_API_RIMBO_TENANCY: /tenancies/tenancy
   REACT_APP_API_RIMBO_TENANCY_BADI: /tenancies/tenancy/badi
   REACT_APP_API_RIMBO_TENANCIES: /tenancies
   REACT_APP_API_RIMBO_TENANT: /tenants/tenant
   REACT_APP_API_RIMBO_TENANT_STRIPE: /tenants/stripe
-  REACT_APP_BASE_URL_EMAIL: https://starcitybackend-dot-rimbo-test.ew.r.appspot.com/submit-email
-  REACT_APP_BASE_URL_STRIPE: https://starcitybackend-dot-rimbo-test.ew.r.appspot.com/stripe
+  REACT_APP_BASE_URL_EMAIL: https://starcitybackend-dot-rimbo-partners.oa.r.appspot.com/submit-email
+  REACT_APP_BASE_URL_STRIPE: https://starcitybackend-dot-rimbo-partners.oa.r.appspot.com/stripe
   REACT_APP_API_MAPS_KEY: AIzaSyAXPY_vd5EkWH4JBDkTHzHcDI1b418pi5Q
 # [END variables]
 
