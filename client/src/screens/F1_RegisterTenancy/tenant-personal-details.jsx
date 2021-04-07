@@ -153,8 +153,8 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         //  Tenancy
         rentAmount: data.rentAmount,
         acceptanceCriteria: data.acceptanceCriteria,
-        rentStartDate: data.rentStartDate,
-        rentEndDate: data.rentEndDate,
+        rentStartDate: data.rentStartDate.slice(0, 10),
+        rentEndDate: data.rentEndDate.slice(0, 10),
         tenancyID: data.tenancyID,
         // Property
         building: data.property.building,
