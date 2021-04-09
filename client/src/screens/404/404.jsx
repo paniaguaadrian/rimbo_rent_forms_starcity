@@ -22,7 +22,8 @@ const Page404 = ({ t }) => {
       <Component404
         title={t("404Page.title")}
         subtitle={t("404Page.subtitle")}
-        paragraph={t("404Page.paragraph")}
+        paragraphEmail={t("404Page.paragraphEmail")}
+        paragraphPhone={t("404Page.paragraphPhone")}
         imageSRC={Image404}
         imageAlt="404 error image"
       />
