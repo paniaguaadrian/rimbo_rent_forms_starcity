@@ -211,7 +211,7 @@ const RegisterTenantCard = ({ t }) => {
         await axios.post(
           `${REACT_APP_BASE_URL}${REACT_APP_API_RIMBO_TENANT_STRIPE}/${randomID}`,
           {
-            isAccepted: tenant.isAccepted,
+            isAcceptedGC: tenant.isAcceptedGC,
             randomID: randomID,
           }
         );
@@ -341,9 +341,9 @@ const RegisterTenantCard = ({ t }) => {
                         <input
                           type="checkbox"
                           required
-                          name="isAccepted"
+                          name="isAcceptedGC"
                           id="terms"
-                          value={tenant.isAccepted}
+                          value={tenant.isAcceptedGC}
                           onChange={(e) => handleNewTenant(e)}
                         />
                         <p>

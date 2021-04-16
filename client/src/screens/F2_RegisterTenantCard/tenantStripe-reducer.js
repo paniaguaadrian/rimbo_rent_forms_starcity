@@ -2,7 +2,7 @@ import { UPDATE_NEWTENANT_INFO } from "./tenantStripe-constants";
 
 export const DefaultTenant = {
   isTrying: true,
-  isAccepted: true,
+  isAcceptedGC: true,
   rentStart: true,
 };
 
