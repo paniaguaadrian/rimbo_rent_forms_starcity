@@ -13,10 +13,6 @@ export const isProperty = (values) => {
     errors.rentAmount = "Monthly Rent is required.";
   }
 
-  if (!values.acceptanceCriteria) {
-    errors.acceptanceCriteria = "Writte a criteria for the tenant.";
-  }
-
   if (!values.rentStartDate) {
     errors.rentStartDate = "Choose a rent start date";
   }
@@ -60,6 +56,10 @@ export const isMoreTenant = (values) => {
 
   if (!values.documentType) {
     errors.documentType = "Document Type is required";
+  }
+
+  if (!values.acceptanceCriteria) {
+    errors.acceptanceCriteria = "Writte a criteria for the tenant.";
   }
 
   if (!values.documentNumber) {

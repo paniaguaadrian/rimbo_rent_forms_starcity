@@ -65,30 +65,7 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
             />
           </div>
         </div>
-        <div className={styles.GroupInput}>
-          <div className={styles.FormLeft}>
-            <Input
-              type="text"
-              name="rentAmount"
-              value={tenancy.propertyDetails.rentAmount}
-              label={t("F1SC.stepZero.rentAmount")}
-              placeholder={t("F1SC.stepZero.rentAmountPL")}
-              onChange={(e) => handleProperty(e)}
-              error={errors.rentAmount}
-            />
-          </div>
-          <div className={styles.FormLeft}>
-            <Input
-              type="text"
-              name="acceptanceCriteria"
-              value={tenancy.propertyDetails.acceptanceCriteria}
-              label={t("F1SC.stepZero.acceptance")}
-              placeholder={t("F1SC.stepZero.acceptancePL")}
-              onChange={(e) => handleProperty(e)}
-              error={errors.acceptanceCriteria}
-            />
-          </div>
-        </div>
+
         <div className={styles.GroupInput}>
           <div className={styles.FormLeft}>
             <Input
@@ -108,6 +85,19 @@ const PropertyDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               label={t("F1SC.stepZero.rentEndDate")}
               onChange={(e) => handleProperty(e)}
               error={errors.rentEndDate}
+            />
+          </div>
+        </div>
+        <div className={styles.GroupInputAlone}>
+          <div className={styles.FormLeft}>
+            <Input
+              type="text"
+              name="rentAmount"
+              value={tenancy.propertyDetails.rentAmount}
+              label={t("F1SC.stepZero.rentAmount")}
+              placeholder={t("F1SC.stepZero.rentAmountPL")}
+              onChange={(e) => handleProperty(e)}
+              error={errors.rentAmount}
             />
           </div>
         </div>

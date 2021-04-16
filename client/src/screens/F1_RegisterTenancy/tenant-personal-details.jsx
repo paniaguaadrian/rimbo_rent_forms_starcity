@@ -75,11 +75,16 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
       addressComponents[2].types[0] === locality && // Barcelona
       addressComponents[6].types[0] === postalCode
     ) {
-      setTenantsZipCode(results[0].address_components[6].long_name);
-      setTenantsAddress(results[0].formatted_address);
-    }
+      const street = results[0].address_components[1].long_name;
+      const streetNumber = results[0].address_components[0].long_name;
+      const city = results[0].address_components[2].long_name;
+      const finalAddress = `${street}, ${streetNumber}, ${city}`;
 
-    setTenantsAddress(results[0].formatted_address);
+      setTenantsZipCode(results[0].address_components[6].long_name);
+      setTenantsAddress(finalAddress);
+    }
+    // console.log(tenantsAddress);
+    // setTenantsAddress(finalAddress);
   };
 
   // Handle on change regular Data
@@ -211,7 +216,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
         randomID: randomID,
         //  Tenancy
         rentAmount: tenancy.propertyDetails.rentAmount,
-        acceptanceCriteria: tenancy.propertyDetails.acceptanceCriteria,
+        acceptanceCriteria: tenancy.tenantPersonalDetails.acceptanceCriteria,
         rentStartDate: tenancy.propertyDetails.rentStartDate,
         rentEndDate: tenancy.propertyDetails.rentEndDate,
         tenancyID: randomID,
@@ -472,6 +477,20 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
               />
             </div>
           </div>
+          <div className={styles.GroupInputAlone}>
+            <div className={styles.FormLeft}>
+              <Input
+                type="text"
+                name="acceptanceCriteria"
+                value={tenancy.propertyDetails.acceptanceCriteria}
+                label={t("F1SC.stepZero.acceptance")}
+                placeholder={t("F1SC.stepZero.acceptancePL")}
+                onChange={(e) => handleTenant(e)}
+                error={errors.acceptanceCriteria}
+              />
+            </div>
+          </div>
+
           <div className={styles.TermsContainer}>
             <InputCheck
               type="checkbox"
