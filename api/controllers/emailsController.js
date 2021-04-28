@@ -77,7 +77,7 @@ const sendF1SCFormEmails = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: `Nuevo inquilino registrado por ${agencyName}`,
+    subject: `Nuevo miembro registrado por ${agencyName}`,
     text: "",
     attachments: [
       {
@@ -114,7 +114,7 @@ const sendF1SCFormEmails = async (req, res) => {
   const StarcityEmail = {
     from: "Rimbo info@rimbo.rent",
     to: starcityEmail, // Starcity Email
-    subject: "Registro de inquilino correcto",
+    subject: "Registro de miembro correcto",
     text: "",
     attachments: [
       {
@@ -529,7 +529,7 @@ const sendF1SCFormEmailsEn = async (req, res) => {
   const RimboEmail = {
     from: "Rimbo info@rimbo.rent",
     to: rimboEmail, // Rimbo Email
-    subject: `New Tenant Listing by ${agencyName}`,
+    subject: `New Member Listing by ${agencyName}`,
     text: "",
     attachments: [
       {
@@ -566,7 +566,7 @@ const sendF1SCFormEmailsEn = async (req, res) => {
   const StarcityEmail = {
     from: "Rimbo info@rimbo.rent",
     to: starcityEmail, // Starcity Email
-    subject: "Tenant successfully registered",
+    subject: "Member successfully registered",
     text: "",
     attachments: [
       {
