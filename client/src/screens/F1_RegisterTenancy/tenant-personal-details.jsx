@@ -354,6 +354,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                       label={t("F1SC.stepThree.tenantsAddress")}
                       placeholder={t("F1SC.stepThree.tenantsAddressPL")}
                       required
+                      error={errors.tenantsAddress}
                     />
                     <div className={styles.GoogleSuggestionContainer}>
                       {/* display sugestions */}

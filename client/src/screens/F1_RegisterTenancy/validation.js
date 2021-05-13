@@ -70,5 +70,10 @@ export const isMoreTenant = (values) => {
     errors.tenadocumentNumberntPhone = "Enter valid document number";
   }
 
+  if (!values.tenantsAddress) {
+    errors.tenantsAddress =
+      "You must select the address suggested by Google Maps";
+  }
+
   return errors;
 };
