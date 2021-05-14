@@ -25,6 +25,7 @@ export const DefaultTenancy = {
   },
 
   tenantPersonalDetails: {
+    tenantsAddress: "",
     documentType: "",
     documentNumber: "",
     monthlyNetIncome: "",

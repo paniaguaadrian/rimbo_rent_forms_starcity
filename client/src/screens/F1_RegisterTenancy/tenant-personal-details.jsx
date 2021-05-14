@@ -82,6 +82,7 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
       setTenantsZipCode(results[0].address_components[6].long_name);
       setTenantsAddress(finalAddress);
+      tenancy.tenantPersonalDetails.tenantsAddress = finalAddress;
     }
     // console.log(tenantsAddress);
     // setTenantsAddress(finalAddress);
