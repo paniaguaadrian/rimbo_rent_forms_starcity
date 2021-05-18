@@ -58,34 +58,36 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
 
     const addressComponents = results[0].address_components;
 
-    const route = "route";
-    const locality = "locality";
-    const streetNumber = "street_number";
-    const postalCode = "postal_code";
+    console.log(addressComponents);
 
-    if (
-      addressComponents[0].types[0] === route &&
-      addressComponents[1].types[0] === locality
-    ) {
-      setTenantsZipCode("");
-      setTenantsAddress(results[0].formatted_address);
-    } else if (
-      addressComponents[0].types[0] === streetNumber && // number
-      addressComponents[1].types[0] === route && // Street
-      addressComponents[2].types[0] === locality && // Barcelona
-      addressComponents[6].types[0] === postalCode
-    ) {
-      const street = results[0].address_components[1].long_name;
-      const streetNumber = results[0].address_components[0].long_name;
-      const city = results[0].address_components[2].long_name;
-      const finalAddress = `${street}, ${streetNumber}, ${city}`;
+    addressComponents.forEach((component) => {
+      if (component.types[0].includes("locality")) {
+        tenancy.tenantPersonalDetails.city = component.long_name;
+      }
 
-      setTenantsZipCode(results[0].address_components[6].long_name);
-      setTenantsAddress(finalAddress);
-      tenancy.tenantPersonalDetails.tenantsAddress = finalAddress;
-    }
-    // console.log(tenantsAddress);
-    // setTenantsAddress(finalAddress);
+      if (component.types[0].includes("street_number")) {
+        tenancy.tenantPersonalDetails.streetNumber = component.long_name;
+      }
+
+      if (component.types[0].includes("route")) {
+        tenancy.tenantPersonalDetails.route = component.long_name;
+      }
+
+      if (component.types[0].includes("postal_code")) {
+        setTenantsZipCode(component.long_name);
+      }
+
+      const finalAddress = `${tenancy.tenantPersonalDetails.route}, ${tenancy.tenantPersonalDetails.streetNumber}, ${tenancy.tenantPersonalDetails.city}`;
+
+      if (!component.types[0].includes("postal_code")) {
+        setTenantsAddress(results[0].formatted_address);
+        tenancy.tenantPersonalDetails.tenantsAddress =
+          results[0].formatted_address;
+      } else {
+        setTenantsAddress(finalAddress);
+        tenancy.tenantPersonalDetails.tenantsAddress = finalAddress;
+      }
+    });
   };
 
   // Handle on change regular Data
@@ -475,7 +477,6 @@ const TenantPersonalDetails = ({ step, setStep, tenancy, setTenancy, t }) => {
                 name="DB"
                 label={t("F1SC.stepThree.DB")}
                 onChange={changeHandler}
-                required
               />
             </div>
           </div>
