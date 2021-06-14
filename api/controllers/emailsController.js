@@ -4,12 +4,12 @@ import hbs from "nodemailer-express-handlebars";
 
 // * Rimbo rent emails
 // Production / Development
-// const rimboEmail = "info@rimbo.rent";
-// const starcityEmail = "spain@starcity.com";
+const rimboEmail = "info@rimbo.rent";
+const starcityEmail = "spain@starcity.com";
 // const rimboEmail = "victor@rimbo.rent";
 // const starcityEmail = "victor@rimbo.rent";
-const rimboEmail = "paniaguasanchezadrian@gmail.com";
-const starcityEmail = "paniaguasanchezadrian@gmail.com";
+// const rimboEmail = "paniaguasanchezadrian@gmail.com";
+// const starcityEmail = "paniaguasanchezadrian@gmail.com";
 
 // ? =======>  SPANISH VERSION START ==============================>
 // ! F1SC Form => E1R (email to Rimbo) E1SC (email to Starcity)
