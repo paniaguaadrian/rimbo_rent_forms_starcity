@@ -203,6 +203,7 @@ const sendE1REmailEmails = async (req, res) => {
   const TenantEmail = {
     from: "Rimbo info@rimbo.rent",
     to: tenantsEmail, // tenants Email
+    bcc: rimboEmail,
     subject:
       "Bienvenido a la revolución de los depósitos - Welcome to the deposit revolution",
     text: "",
